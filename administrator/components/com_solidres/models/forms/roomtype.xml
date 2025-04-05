@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <config>
+        <inlinehelp button="show"/>
+    </config>
+    <fieldset>
+        <field name="id" type="hidden"/>
+
+        <field name="reservation_asset_id" type="reservationasset" required="true"
+               label="SR_PROPERTY"
+               description="SR_FIELD_RT_RESERVATIONASSET_DESC" filter="integer"/>
+
+        <field name="is_private"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               label="SR_FIELD_IS_PRIVATE_LABEL" default="1"
+               description="SR_FIELD_IS_PRIVATE_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="is_master"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               label="SR_FIELD_IS_MASTER_LABEL" default="0"
+               description="SR_FIELD_IS_MASTER_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="coupon_id" type="checkboxcoupon" label="SR_FIELD_ROOM_TYPE_COUPON_LABEL"
+               description="SR_FIELD_ROOM_TYPE_COUPON_DESC"/>
+
+        <field name="extra_id" type="checkboxextra" label="SR_FIELD_ROOM_TYPE_EXTRA_LABEL"
+               description="SR_FIELD_ROOM_TYPE_EXTRA_DESC"/>
+
+        <field name="name" type="text"
+               label="JFIELD_NAME_LABEL"
+               description="SR_FIELD_ROOM_TYPE_NAME_DESC" required="true"/>
+
+        <field name="default_tariff" type="defaulttariff"
+               label="SR_FIELD_ROOM_TYPE_PRICE_LABEL"
+               description="SR_FIELD_ROOM_TYPE_PRICE_DESC" required="true"/>
+
+        <field name="alias" type="text"
+               label="JALIAS"
+               description="SR_FIELD_ALIAS_DESC"/>
+
+        <field name="occupancy_max" type="integer"
+               label="SR_FIELD_OCCUPANCY_MAX_LABEL" first="0" last="100" step="1"
+               description="SR_FIELD_OCCUPANCY_MAX_DESC"/>
+
+        <field name="occupancy_adult" type="integer"
+               label="SR_FIELD_OCCUPANCY_ADULT_LABEL" first="0" last="100" step="1" default="1"
+               description="SR_FIELD_OCCUPANCY_ADULT_DESC"/>
+
+        <field name="occupancy_child" type="integer"
+               label="SR_FIELD_OCCUPANCY_CHILD_LABEL" first="0" last="100" step="1"
+               description="SR_FIELD_OCCUPANCY_CHILD_DESC"/>
+
+        <field name="occupancy_child_age_range" type="integer"
+               label="SR_FIELD_OCCUPANCY_CHILD_AGE_RANGE_LABEL" default="0" first="0" last="100" step="1"
+               description="SR_FIELD_OCCUPANCY_CHILD_AGE_RANGE_DESC"/>
+
+        <field name="description" type="editor"
+               label="JGLOBAL_DESCRIPTION"
+               filter="safehtml" buttons="true"/>
+
+        <field name="state" type="list"
+               label="JSTATUS"
+               default="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="-2">JTRASH</option>
+        </field>
+
+        <field name="featured"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               label="SR_ROOM_TYPE_FEATURED_LABEL" description="SR_ROOM_TYPE_FEATURED_DESC"
+               default="0"
+        >
+            <option value="0">JOFF</option>
+            <option value="1">JON</option>
+        </field>
+
+        <field name="ordering" type="text" label="JField_Ordering_Label"
+               description="SR_ROOM_TYPE_ORDERING_DESC"/>
+
+
+        <field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"
+               description="COM_BANNERS_FIELD_LANGUAGE_DESC"
+        >
+            <option value="*">JALL</option>
+        </field>
+
+        <field name="created_date" type="calendar"
+               label="JGLOBAL_FIELD_Created_Label" description="JGLOBAL_FIELD_Created_Desc"
+               format="%Y-%m-%d %H:%M:%S"
+               filter="server_utc"/>
+
+        <field name="created_by" type="user"
+               label="JGLOBAL_FIELD_Created_by_Label" description="JGLOBAL_FIELD_CREATED_BY_Desc"/>
+
+        <field name="modified_date" type="text" class="readonly"
+               label="JGLOBAL_FIELD_MODIFIED_LABEL" description="SR_FIELD_MODIFIED_DATE_DESC"
+               readonly="true" filter="unset"/>
+
+        <field name="modified_by" type="hidden" filter="unset"/>
+
+        <field name="checked_out" type="hidden" filter="unset"/>
+
+        <field name="checked_out_time" type="hidden" filter="unset"/>
+
+        <field
+                name="mediaId"
+                type="hidden"
+        />
+
+        <field
+                name="currency_id"
+                type="hidden"
+        />
+
+        <field
+                name="deleteMediaId"
+                type="hidden"
+        />
+
+        <field
+                name="media"
+                type="hidden"
+        />
+
+        <field
+                name="roomList"
+                type="hidden"
+        />
+
+        <field
+                name="currency"
+                type="hidden"
+        />
+
+
+        <field
+                name="standard_tariff_title"
+                type="text"
+                default="" label="SR_FIELD_STANDARD_TARIFF_TITLE_LABEL"
+                description="SR_FIELD_STANDARD_TARIFF_TITLE_DESC"/>
+        />
+
+        <field
+                name="standard_tariff_description"
+                type="text"
+                default="" label="SR_FIELD_STANDARD_TARIFF_DESCRIPTION_LABEL"
+                description="SR_FIELD_STANDARD_TARIFF_DESCRIPTION_DESC"/>
+        />
+
+        <field name="tariff" type="text"
+               label="SR_PRICE_VALUE_LABEL" description="SR_PRICE_VALUE_DESC"
+        />
+
+        <field name="rooms" type="hidden"/>
+
+        <field name="facility_id" type="checkboxfacility" label="SR_FIELD_ROOM_TYPE_FACILITY_LABEL"
+               description="SR_FIELD_ROOM_TYPE_FACILITY_DESC"/>
+
+    </fieldset>
+
+    <fields name="params">
+        <fieldset name="display" label="" addfieldpath="/administrator/components/com_solidres/models/fields">
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+            <field name="show_smoking_option"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="1" label="SR_ONLY_SHOW_SMOKING_OPTION_LABEL"
+                   description="SR_ONLY_SHOW_SMOKING_OPTION_DESC"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_adult_option"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="1" label="SR_ONLY_SHOW_ADULT_OPTION_LABEL"
+                   description="SR_ONLY_SHOW_ADULT_OPTION_DESC"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_child_option"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="1" label="SR_ONLY_SHOW_CHILD_OPTION_LABEL"
+                   description="SR_ONLY_SHOW_CHILD_OPTION_DESC"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_guest_option"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="0" label="SR_ONLY_SHOW_GUEST_OPTION_LABEL"
+                   description="SR_ONLY_SHOW_GUEST_OPTION_DESC"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_guest_name_field"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="1"
+                   label="SR_ONLY_SHOW_GUEST_NAME_FIELD_LABEL"
+                   description="SR_ONLY_SHOW_GUEST_NAME_FIELD_DESC"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="guest_name_optional"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="0"
+                   label="SR_GUEST_NAME_OPTIONAL_LABEL"
+                   description="SR_GUEST_NAME_OPTIONAL_DESC"
+                   showon="show_guest_name_field:1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_number_remaining_rooms"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   description="SR_FIELD_SHOW_NUMBER_REMAINING_ROOMS_DESC"
+                   label="SR_FIELD_SHOW_NUMBER_REMAINING_ROOMS_LABEL"
+                   default="1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_more_info_button"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   description="SR_FIELD_SHOW_MORE_INFO_BTN_DESC"
+                   label="SR_FIELD_SHOW_MORE_INFO_BTN_LABEL"
+                   default="1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+            <field name="enable_single_supplement"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="0" label="SR_ENABLE_SINGLE_SUPPLEMENT_FIELD_LABEL"
+                   description="SR_ENABLE_SINGLE_SUPPLEMENT_FIELD_DESC"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="single_supplement_value" type="text"
+                   label="SR_SINGLE_SUPPLEMENT_VALUE_LABEL" description="SR_SINGLE_SUPPLEMENT_VALUE_DESC"
+
+                   showon="enable_single_supplement:1"
+            />
+            <field name="single_supplement_is_percent"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   label="SR_SINGLE_SUPPLEMENT_IS_PERCENT_LABEL" description="SR_SINGLE_SUPPLEMENT_IS_PERCENT_DESC"
+                   default="0"
+                   showon="enable_single_supplement:1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+            <field name="is_exclusive"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   label="SR_IS_EXCLUSIVE_LABEL" description="SR_IS_EXCLUSIVE_DESC"
+                   default="0"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field name="skip_room_form"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   label="SR_SKIP_ROOM_FORM_LABEL" description="SR_SKIP_ROOM_FORM_DESC"
+                   default="0"
+                   showon="is_exclusive:1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field name="advertised_price" type="text"
+                   label="SR_FIELD_ADVERTISED_PRICE_LABEL" default=""
+                   description="SR_FIELD_ADVERTISED_PRICE_DESC"/>
+
+            <field name="advertised_price_prefix" type="text"
+                   label="SR_FIELD_ADVERTISED_PRICE_PREFIX_LABEL" filter="safehtml"
+                   description="SR_FIELD_ADVERTISED_PRICE_PREFIX_DESC"/>
+
+            <field name="advertised_price_suffix" type="text"
+                   label="SR_FIELD_ADVERTISED_PRICE_SUFFIX_LABEL" filter="safehtml"
+                   description="SR_FIELD_ADVERTISED_PRICE_SUFFIX_DESC"/>
+
+            <field type="spacer"
+                   hr="true"
+            />
+
+            <field name="child_room_cost_calc"
+                   type="list"
+                   label="SR_FIELD_CHILD_ROOM_COST_CALC_LABEL"
+                   description="SR_FIELD_CHILD_ROOM_COST_CALC_DESC_2"
+                   default=""
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">SR_CHILD_ROOM_COST_CALC_PER_AGE_RANGE</option>
+                <option value="0">SR_CHILD_ROOM_COST_CALC_PER_QUANTITY</option>
+                <option value="2">SR_CHILD_ROOM_COST_CALC_MIXED</option>
+            </field>
+        </fieldset>
+    </fields>
+</form>

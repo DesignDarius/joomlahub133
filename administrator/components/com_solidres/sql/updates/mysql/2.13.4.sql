@@ -1,0 +1,1 @@
+ALTER TABLE `#__sr_reservations` ADD `confirmation_date` DATETIME NULL AFTER `reservation_meta`;

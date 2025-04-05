@@ -1,0 +1,2135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="component"
+              label="SR_CONFIG_GENERAL_LABEL"
+              description="SR_CONFIG_GENERAL_DESC"
+              addfieldpath="/administrator/components/com_content/models/fields"
+              addfieldprefix="Joomla\Component\Content\Administrator\Field">
+        <field
+                name="main_activity"
+                type="list"
+                label="SR_MAIN_ACTIVITY_LABEL"
+                description="SR_MAIN_ACTIVITY_DESC"
+                default="">
+            <option value="">SR_ACTIVITY_PROPERTY_N_EXPERIENCE</option>
+            <option value="0">SR_PROPERTY</option>
+            <option value="1">SR_EXPERIENCE</option>
+        </field>
+        <field
+                name="default_view"
+                type="text"
+                label="SR_FIELD_DEFAULT_VIEW_LABEL"
+                description="SR_FIELD_DEFAULT_VIEW_DESC"
+        />
+        <field
+                name="default_gallery"
+                type="gallerylist"
+                addfieldpath="/administrator/components/com_solidres/models/fields"
+                default="simple_gallery"
+                label="SR_FIELD_DEFAULT_GALLERY"
+                description="SR_FIELD_DEFAULT_GALLERY_DESC"/>
+
+        <field
+                name="date_format"
+                type="list"
+                default="d-m-Y"
+                label="SR_FIELD_DATE_FORMAT_LABEL"
+                description="SR_FIELD_DATE_FORMAT_DESC">
+            <option
+                    value="d-m-Y">SR_DATE_FORMAT_0
+            </option>
+            <option
+                    value="d/m/Y">SR_DATE_FORMAT_1
+            </option>
+            <option
+                    value="d M Y">SR_DATE_FORMAT_2
+            </option>
+            <option
+                    value="d F Y">SR_DATE_FORMAT_3
+            </option>
+            <option
+                    value="D, d M Y">SR_DATE_FORMAT_4
+            </option>
+            <option
+                    value="l, d F Y">SR_DATE_FORMAT_5
+            </option>
+            <option
+                    value="Y-m-d">SR_DATE_FORMAT_6
+            </option>
+            <option
+                    value="m-d-Y">SR_DATE_FORMAT_7
+            </option>
+            <option
+                    value="m/d/Y">SR_DATE_FORMAT_8
+            </option>
+            <option
+                    value="M d, Y">SR_DATE_FORMAT_9
+            </option>
+            <option
+                    value="F d, Y">SR_DATE_FORMAT_10
+            </option>
+            <option
+                    value="D, M d, Y">SR_DATE_FORMAT_11
+            </option>
+            <option
+                    value="l, F d, Y">SR_DATE_FORMAT_12
+            </option>
+        </field>
+
+        <field
+                name="availability_calendar_enable"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_FIELD_AVAILABILITY_CALENDAR_ENABLE_LABEL"
+                description="SR_FIELD_AVAILABILITY_CALENDAR_ENABLE_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="availability_calendar_style"
+                type="list"
+                default="1"
+                showon="availability_calendar_enable:1"
+                label="SR_FIELD_AVAILABILITY_CALENDAR_STYLE_LABEL"
+                description="SR_FIELD_AVAILABILITY_CALENDAR_STYLE_DESC">
+            <option
+                    value="0">SR_LEGACY
+            </option>
+            <option
+                    value="1">SR_MODERN
+            </option>
+        </field>
+
+        <field
+                name="availability_calendar_month_number"
+                type="text"
+                default="6"
+                showon="availability_calendar_enable:1"
+                label="SR_FIELD_AVAILABILITY_CALENDAR_MONTH_NUMBER_LABEL"
+                description="SR_FIELD_AVAILABILITY_CALENDAR_MONTH_NUMBER_DESC"/>
+
+        <field
+                name="week_start_day"
+                type="list"
+                default="1"
+                label="SR_FIELD_WEEK_START_DAY_LABEL"
+                description="SR_FIELD_WEEK_START_DAY_DESC">
+            <option
+                    value="0">SUN
+            </option>
+            <option
+                    value="1">MON
+            </option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field name="enable_multilingual_mode"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               label="SR_FIELD_ENABLE_MULTILINGUAL_MODE_LABEL"
+               description="SR_FIELD_ENABLE_MULTILINGUAL_MODE_DESC"
+               default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="datepicker_month_number"
+                type="list"
+                default="1"
+                label="SR_FIELD_DATEPICKER_MONTH_NUMBER_LABEL"
+                description="SR_FIELD_DATEPICKER_MONTH_NUMBER_DESC">
+            <option
+                    value="1">1
+            </option>
+            <option
+                    value="2">2
+            </option>
+        </field>
+
+        <field
+                name="min_days_book_in_advance"
+                type="text"
+                default="0"
+                label="SR_FIELD_MIN_DAYS_BOOK_IN_ADVANCE_LABEL"
+                description="SR_FIELD_MIN_DAYS_BOOK_IN_ADVANCE_DESC"/>
+
+        <field
+                name="max_days_book_in_advance"
+                type="text"
+                default="0"
+                label="SR_FIELD_MAX_DAYS_BOOK_IN_ADVANCE_LABEL"
+                description="SR_FIELD_MAX_DAYS_BOOK_IN_ADVANCE_DESC"/>
+
+        <field
+                name="min_length_of_stay"
+                type="text"
+                default="1"
+                label="SR_FIELD_MIN_LENGTH_OF_STAY_LABEL"
+                description="SR_FIELD_MIN_LENGTH_OF_STAY_DESC"/>
+
+        <field
+                name="child_max_age_limit"
+                type="integer"
+                first="1"
+                last="17"
+                step="1"
+                default="17"
+                label="SR_FIELD_CHILD_MAX_AGE_LIMIT_LABEL"
+                description="SR_FIELD_CHILD_MAX_AGE_LIMIT_DESC"/>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="show_solidres_copyright"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_FIELD_SHOW_SOLIDRES_POWERED_BY_LABEL"
+                description="SR_FIELD_SHOW_SOLIDRES_POWERED_BY_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field name="customer_user_groups" type="usergrouplist" default="2"
+               label="SR_FIELD_CUSTOMER_USER_GROUP_LABEL"
+               description="SR_FIELD_CUSTOMER_USER_GROUP_DESC"
+               multiple="true"
+        />
+
+        <field name="employee_user_groups" type="usergrouplist" default=""
+               label="SR_FIELD_EMPLOYEE_USER_GROUP_LABEL"
+               description="SR_FIELD_EMPLOYEE_USER_GROUP_DESC"
+               multiple="true"
+        />
+
+        <field name="show_login_box"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               label="SR_FIELD_SHOW_LOGIN_BOX_LABEL" description="SR_FIELD_SHOW_LOGIN_BOX_DESC"
+               default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field name="enable_reservation_live_refresh"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               label="SR_FIELD_ENABLE_RESERVATION_LIVE_REFRESH_LABEL"
+               description="SR_FIELD_ENABLE_RESERVATION_LIVE_REFRESH_DESC"
+               default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="reservation_live_refresh_interval"
+                type="text"
+                default="15"
+                showon="enable_reservation_live_refresh:1"
+                label="SR_FIELD_RESERVATION_LIVE_REFRESH_INTERVAL_LABEL"
+                description="SR_FIELD_RESERVATION_LIVE_REFRESH_INTERVAL_DESC"/>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field name="ui_framework" type="list"
+               label="SR_FIELD_UI_FRAMEWORK_LABEL" description="SR_FIELD_UI_FRAMEWORK_DESC"
+               default="bs5"
+        >
+            <option value="bs5">Bootstrap 5 (for Joomla 4 + Joomla 5)</option>
+        </field>
+        <field name="layout_style" type="list"
+               label="SR_FIELD_LAYOUT_STYLE_LABEL" description="SR_FIELD_LAYOUT_STYLE_DESC"
+               default=""
+        >
+            <option value="">SR_LAYOUT_STYLE_1</option>
+            <option value="style2">SR_LAYOUT_STYLE_2</option>
+            <option value="style3">SR_LAYOUT_STYLE_3</option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="alert_expired_session"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="SR_ALERT_EXPIRED_SESSION_LABEL"
+                description="SR_ALERT_EXPIRED_SESSION_DESC"
+                default="1"
+                filter="uint">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field type="note" label="SR_ALERT_EXPIRED_HINT" showon="alert_expired_session:1"/>
+        <field
+                name="alert_expired_minutes"
+                type="number"
+                label="SR_ALERT_EXPIRED_MINUTES_LABEL"
+                description="SR_ALERT_EXPIRED_MINUTES_DESC"
+                min="1"
+                default="10"
+                filter="uint"
+                showon="alert_expired_session:1"/>
+        <field
+                name="auto_reload_seconds"
+                type="number"
+                label="SR_AUTO_RELOAD_SECONDS_LABEL"
+                description="SR_AUTO_RELOAD_SECONDS_DESC"
+                min="0"
+                default="0"
+                filter="uint"
+                showon="alert_expired_session:1"/>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="enable_auto_scroll"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="SR_ENABLE_AUTO_SCROLL_LABEL"
+                description="SR_ENABLE_AUTO_SCROLL_DESC"
+                default="1"
+                filter="uint">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+                name="auto_scroll_offset"
+                type="text"
+                default="0"
+                label="SR_AUTO_SCROLL_OFFSET_LABEL"
+                description="SR_AUTO_SCROLL_OFFSET_DESC" />
+        <field
+                name="auto_scroll_tariff"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="SR_AUTO_SCROLL_TARIFF_LABEL"
+                description="SR_AUTO_SCROLL_TARIFF_DESC"
+                default="1"
+                showon="enable_auto_scroll:1"
+                filter="uint">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="terms_conditions_format"
+                type="list"
+                label="SR_TERMS_CONDITIONS_FORMAT_LABEL"
+                description="SR_TERMS_CONDITIONS_FORMAT_DESC"
+                default="0"
+                filter="uint">
+            <option value="0">SR_TERMS_CONDITIONS_FORMAT_ARTICLE</option>
+            <option value="1">SR_TERMS_CONDITIONS_FORMAT_URL</option>
+        </field>
+
+        <field name="termsofuse" type="modal_article"
+               label="SR_FIELD_SELECT_ARTICLE_TERMS_OF_USE_LABEL"
+               required="false"
+               select="true"
+               new="true"
+               edit="true"
+               clear="true"
+               showon="terms_conditions_format:0"
+               description="SR_FIELD_SELECT_ARTICLE_TERMS_OF_USE_DESC"
+        />
+        <field name="termsofuse_url" type="text"
+               label="SR_FIELD_SELECT_ARTICLE_TERMS_OF_USE_URL_LABEL"
+               required="false"
+               showon="terms_conditions_format:1"
+               description="SR_FIELD_SELECT_ARTICLE_TERMS_OF_USE_URL_DESC"
+        />
+        <field name="privacypolicy" type="modal_article"
+               label="SR_FIELD_SELECT_ARTICLE_PRIVACY_POLICY_LABEL"
+               required="false"
+               select="true"
+               new="true"
+               edit="true"
+               clear="true"
+               showon="terms_conditions_format:0"
+               description="SR_FIELD_SELECT_ARTICLE_PRIVACY_POLICY_DESC"
+        />
+        <field name="privacypolicy_url" type="text"
+               label="SR_FIELD_SELECT_ARTICLE_PRIVACY_POLICY_URL_LABEL"
+               required="false"
+               showon="terms_conditions_format:1"
+               description="SR_FIELD_SELECT_ARTICLE_PRIVACY_POLICY_URL_DESC"
+        />
+    </fieldset>
+    <fieldset
+            name="tariff"
+            label="SR_CONFIG_TARIFF_LABEL"
+            description="SR_CONFIG_TARIFF_DESC"
+    >
+        <field name="show_frontend_tariffs" type="list"
+               label="SR_FIELD_SHOW_FRONTEND_TARIFF_LABEL" description="SR_FIELD_SHOW_FRONTEND_TARIFF_DESC"
+               default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+            <option value="2">SR_FIELD_SHOW_FRONTEND_TARIFF_WHEN_CHECKED</option>
+        </field>
+
+        <field name="default_tariff_visibility" type="list" showon="show_frontend_tariffs:1"
+               label="SR_FIELD_DEFAULT_TARIFF_VISIBILITY_LABEL" description="SR_FIELD_DEFAULT_TARIFF_VISIBILITY_DESC"
+               default="1"
+        >
+            <option value="0">SR_FIELD_DEFAULT_TARIFF_VISIBILITY_HIDE</option>
+            <option value="1">SR_FIELD_DEFAULT_TARIFF_VISIBILITY_SHOW</option>
+        </field>
+
+        <field name="child_room_cost_calc" type="list"
+               label="SR_FIELD_CHILD_ROOM_COST_CALC_LABEL" description="SR_FIELD_CHILD_ROOM_COST_CALC_DESC"
+                default="1"
+        >
+            <option value="1">SR_CHILD_ROOM_COST_CALC_PER_AGE_RANGE</option>
+            <option value="0">SR_CHILD_ROOM_COST_CALC_PER_QUANTITY</option>
+            <option value="2">SR_CHILD_ROOM_COST_CALC_MIXED</option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field name="enable_unoccupied_pricing"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               label="SR_FIELD_ENABLE_UNOCCUPIED_PRICING_LABEL"
+               description="SR_FIELD_ENABLE_UNOCCUPIED_PRICING_DESC"
+               default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field name="interval_checking_type" type="list"
+               label="SR_FIELD_INTERVAL_CHECKING_TYPE_LABEL" description="SR_FIELD_INTERVAL_CHECKING_TYPE_DESC"
+               default="1"
+        >
+            <option value="0">SR_FIELD_INTERVAL_CHECKING_TYPE_MIN</option>
+            <option value="1">SR_FIELD_INTERVAL_CHECKING_TYPE_MAX</option>>
+        </field>
+    </fieldset>
+    <fieldset
+            name="currency"
+            addfieldpath="/administrator/components/com_solidres/models/fields"
+            label="SR_CONFIG_CURRENCY_LABEL"
+            description="SR_CONFIG_CURRENCY_DESC"
+    >
+
+        <field
+                name="default_currency_id"
+                type="currency"
+                label="SR_CONFIG_DEFAULT_CURRENCY_LABEL"
+                description="SR_CONFIG_DEFAULT_CURRENCY_DESC"
+
+                filter=""/>
+
+        <field name="currency_format_pattern" type="list" label="SR_FIELD_DEFAULT_CURRENCY_FORMAT_PATTERN"
+               description="SR_FIELD_DEFAULT_CURRENCY_FORMAT_PATTERN_DESC"
+               filter="intval" default="1" >
+            <option value="1">SR_CURRENCY_FORMAT_PATTERN_1</option>
+            <option value="2">SR_CURRENCY_FORMAT_PATTERN_2</option>
+            <option value="3">SR_CURRENCY_FORMAT_PATTERN_3</option>
+            <option value="4">SR_CURRENCY_FORMAT_PATTERN_4</option>
+            <option value="5">SR_CURRENCY_FORMAT_PATTERN_5</option>
+            <option value="6">SR_CURRENCY_FORMAT_PATTERN_6</option>
+            <option value="7">SR_CURRENCY_FORMAT_PATTERN_7</option>
+            <option value="8">SR_CURRENCY_FORMAT_PATTERN_8</option>
+            <option value="9">SR_CURRENCY_FORMAT_PATTERN_9</option>
+            <option value="10">SR_CURRENCY_FORMAT_PATTERN_10</option>
+        </field>
+
+        <field
+                name="number_decimal_points"
+                type="integer"
+                label="SR_CONFIG_CURRENCY_NUMBER_DECIMAL_POINTS"
+                description="SR_CONFIG_CURRENCY_NUMBER_DECIMAL_POINTS_DESC"
+                filter="intval"
+                default="2"
+                first="0"
+                last="6"
+                step="1"/>
+
+        <field
+                name="currency_code_symbol"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="code"
+                label="SR_CURRENCY_SHOW_CODE_OR_SYMBOL_LABEL"
+                description="SR_CURRENCY_SHOW_CODE_OR_SYMBOL_DESC">
+            <option
+                    value="code">SR_CURRENCY_CODE
+            </option>
+            <option
+                    value="sign">SR_CURRENCY_SYMBOL
+            </option>
+        </field>
+
+        <field
+                name="currency_channel"
+                type="list"
+                label="SR_FIELD_CURRENCY_CHANNEL_LABEL"
+                description="SR_FIELD_CURRENCY_CHANNEL_DESC"
+                default="ecb">
+            <option value="ecb">SR_CURRENCY_CHANNEL_ECB</option>
+            <option value="openexchangerates">SR_CURRENCY_CHANNEL_OPENEXCHANGERATES</option>
+        </field>
+        <field type="note" label="SR_CURRENCY_CHANNEL_HINT"/>
+        <field
+                name="open_channel_key"
+                label="SR_FIELD_CURRENCY_CHANNEL_API_KEY"
+                showon="currency_channel:openexchangerates"
+                />
+    </fieldset>
+    <fieldset
+            name="reservation"
+            addfieldpath="/administrator/components/com_solidres/models/fields"
+            label="SR_CONFIG_RESERVATION_LABEL">
+
+        <field
+                name="default_reservation_state"
+                type="statuses"
+                scope="0"
+                statusType="0"
+                default="0"
+                label="SR_FIELD_DEFAULT_RESERVATION_LABEL"
+                description="SR_FIELD_DEFAULT_RESERVATION_DESC" />
+
+        <field
+                name="confirm_state"
+                type="statuses"
+                label="SR_FIELD_CONFIRM_STATE_LABEL"
+                description="SR_FIELD_CONFIRM_STATE_DESC"
+                scope="0"
+                statusType="0"
+                default="5"
+                required="true"
+                multiple="false"
+        />
+
+        <field
+                name="confirm_payment_state"
+                type="statuses"
+                label="SR_FIELD_CONFIRM_PAYMENT_STATE_LABEL"
+                description="SR_FIELD_CONFIRM_PAYMENT_STATE_DESC"
+                scope="0"
+                statusType="1"
+                default="1"
+                required="true"
+                multiple="false"
+        />
+
+        <field
+                name="pending_state"
+                type="statuses"
+                label="SR_FIELD_PENDING_STATE_LABEL"
+                description="SR_FIELD_PENDING_STATE_DESC"
+                scope="0"
+                statusType="0"
+                default="0"
+                required="true"
+                multiple="false"
+        />
+
+        <field
+                name="pending_payment_state"
+                type="statuses"
+                label="SR_FIELD_PENDING_PAYMENT_STATE_LABEL"
+                description="SR_FIELD_PENDING_PAYMENT_STATE_DESC"
+                scope="0"
+                statusType="1"
+                default="3"
+                required="true"
+                multiple="false"
+        />
+
+        <field
+                name="cancel_state"
+                type="statuses"
+                label="SR_FIELD_CANCEL_STATE_LABEL"
+                description="SR_FIELD_CANCEL_STATE_DESC"
+                scope="0"
+                statusType="0"
+                default="4"
+                required="true"
+                multiple="false"
+        />
+
+        <field
+                name="cancel_payment_state"
+                type="statuses"
+                label="SR_FIELD_CANCEL_PAYMENT_STATE_LABEL"
+                description="SR_FIELD_CANCEL_PAYMENT_STATE_DESC"
+                scope="0"
+                statusType="1"
+                default="2"
+                required="true"
+                multiple="false"
+        />
+
+        <field
+                name="default_reservation_no_room_state"
+                type="statuses"
+                scope="0"
+                statusType="0"
+                default="4"
+                label="SR_FIELD_DEFAULT_RESERVATION_NO_ROOM_LABEL"
+                description="SR_FIELD_DEFAULT_RESERVATION_NO_ROOM_DESC" />
+
+        <field
+                name="trashed_state"
+                type="statuses"
+                scope="0"
+                statusType="0"
+                default="-2"
+                label="SR_FIELD_TRASHED_STATE_LABEL"
+                description="SR_FIELD_TRASHED_STATE_DESC" />
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="send_email_on_reservation_state_change"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="SR_SEND_EMAIL_ON_RESERVATION_STATE_CHANGE_LABEL"
+                description="SR_SEND_EMAIL_ON_RESERVATION_STATE_CHANGE_DESC"
+                default="1"
+                filter="uint">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="reservation_state_change_email_format"
+                type="list"
+                label="SR_RESERVATION_STATE_CHANGE_EMAIL_FORMAT_LABEL"
+                description="SR_RESERVATION_STATE_CHANGE_EMAIL_FORMAT_DESC"
+                showon="send_email_on_reservation_state_change:1"
+                default="0"
+                filter="uint">
+            <option value="0">Text</option>
+            <option value="1">HTML</option>
+        </field>
+
+        <field
+                name="status_trigger_reservation_state_change_email"
+                type="statuses"
+                label="SR_STATUS_TRIGGER_RESERVATION_STATE_CHANGE_EMAIL_LABEL"
+                description="SR_STATUS_TRIGGER_RESERVATION_STATE_CHANGE_EMAIL_DESC"
+                scope="0"
+                statusType="0"
+                multiple="true"
+                showon="send_email_on_reservation_state_change:1"
+        />
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="show_price_with_tax"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="0"
+                label="SR_FIELD_SHOW_PRICE_WITH_TAX_LABEL"
+                description="SR_FIELD_SHOW_PRICE_WITH_TAX_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field name="discount_pre_tax"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               label="SR_FIELD_DISCOUNT_PRE_TAX_LABEL" description="SR_FIELD_DISCOUNT_PRE_TAX_DESC"
+               default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                name="show_rooms_rates_info"
+                label="SR_FIELD_SHOW_ROOMS_RATES_INFO_LABEL"
+                description="SR_FIELD_SHOW_ROOMS_RATES_INFO_DESC"
+                default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="show_asset_remaining_rooms"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="SR_SHOW_ASSET_REMAINING_ROOMS_LABEL"
+                description="SR_SHOW_ASSET_REMAINING_ROOMS_DESC"
+                default="1"
+                filter="uint">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                name="enable_geocoding"
+                label="SR_FIELD_ENABLE_GEOCODING_LABEL"
+                description="SR_FIELD_ENABLE_GEOCODING_DESC"
+                default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                name="allow_free_reservation"
+                label="SR_FIELD_ALLOW_FREE_RESERVATION_LABEL"
+                description="SR_FIELD_ALLOW_FREE_RESERVATION_DESC"
+                default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                name="enable_reservation_tracking"
+                label="SR_FIELD_ENABLE_RESERVATION_TRACKING_LABEL"
+                description="SR_FIELD_ENABLE_RESERVATION_TRACKING_DESC"
+                default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="list"
+                name="extras_default_visibility"
+                label="SR_FIELD_EXTRAS_DEFAULT_VISIBILITY_LABEL"
+                description="SR_FIELD_EXTRAS_DEFAULT_VISIBILITY_DESC"
+                default="1"
+        >
+            <option value="0">SR_FIELD_DEFAULT_TARIFF_VISIBILITY_HIDE</option>
+            <option value="1">SR_FIELD_DEFAULT_TARIFF_VISIBILITY_SHOW</option>
+        </field>
+
+        <field name="reservation_note_allowed_file_types"
+               type="text"
+               label="SR_FIELD_NOTE_ALLOWED_FILE_TYPES_LABEL"
+               description="SR_FIELD_NOTE_ALLOWED_FILE_TYPES_DESC"
+               default="jpg,jpeg,png,pdf,doc,docx"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="custom_field_reservation_list_view"
+                type="textarea"
+                label="SR_CUSTOM_FIELDS_LIST_VIEW_LABEL"
+                description="SR_CUSTOM_FIELDS_LIST_VIEW_DESC"
+                cols="50"
+                rows="10"
+                default=""/>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="rescode_custom_format"
+                type="text"
+                label="SR_FIELD_RESCODE_CUSTOM_FORMAT_LABEL"
+                description="SR_FIELD_RESCODE_CUSTOM_FORMAT_HINT"
+                default="{RANDOM}"
+                filter="string"
+        />
+
+    </fieldset>
+    <fieldset
+            name="media"
+            addfieldpath="/administrator/components/com_solidres/models/fields"
+            label="SR_CONFIG_MEDIA_LABEL"
+            description="SR_CONFIG_MEDIA_DESC"
+    >
+        <field
+            name="images_storage_path"
+            type="text"
+            default="bookingengine"
+            label="SR_CONFIG_MEDIA_UPLOAD_PATH_LABEL"
+            description="SR_CONFIG_MEDIA_UPLOAD_PATH_DESC"
+            filter="path"
+        />
+        <field name="thumb_sizes"
+               type="textarea"
+               label="SR_CONFIG_MEDIA_THUMB_SIZES_LABEL"
+               description="SR_CONFIG_MEDIA_THUMB_SIZES_DESC"
+               default="310x250&#13;&#10;75x75"
+               filter="raw"
+               rows="5"
+        />
+
+        <field name="asset_thumb_small"
+               type="thumbsizes"
+               label="SR_CONFIG_MEDIA_ASSET_THUMB_SMALL_LABEL"
+               default="75x75"/>
+
+        <field name="asset_thumb_medium"
+               type="thumbsizes"
+               label="SR_CONFIG_MEDIA_ASSET_THUMB_MEDIUM_LABEL"
+               default="310x250"/>
+
+        <field name="asset_thumb_large"
+               type="thumbsizes"
+               label="SR_CONFIG_MEDIA_ASSET_THUMB_LARGE_LABEL"
+               default="310x250"/>
+
+        <field name="roomtype_thumb_small"
+               type="thumbsizes"
+               label="SR_CONFIG_MEDIA_ROOMTYPE_THUMB_SMALL_LABEL"
+               default="75x75"/>
+
+        <field name="roomtype_thumb_medium"
+               type="thumbsizes"
+               label="SR_CONFIG_MEDIA_ROOMTYPE_THUMB_MEDIUM_LABEL"
+               default="310x250"/>
+
+        <field name="roomtype_thumb_large"
+               type="thumbsizes"
+               label="SR_CONFIG_MEDIA_ROOMTYPE_THUMB_LARGE_LABEL"
+               default="310x250"/>
+
+    </fieldset>
+    <fieldset
+            name="invoice"
+            label="PLG_SOLIDRES_INVOICE_TAB_LABEL"
+            description="PLG_SOLIDRES_INVOICE_TAB_DESC"
+    >
+        <field
+                name="auto_create_invoice"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="0"
+                label="PLG_SOLIDRES_INVOICE_AUTO_CREATE_LABEL"
+                description="PLG_SOLIDRES_INVOICE_AUTO_CREATE_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="auto_send_invoice"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="0"
+                showon="auto_create_invoice:1"
+                label="PLG_SOLIDRES_INVOICE_AUTO_SEND_LABEL"
+                description="PLG_SOLIDRES_INVOICE_AUTO_SEND_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="auto_send_invoice_payment_methods"
+                type="paymentmethods"
+                addfieldpath="/administrator/components/com_solidres/models/fields"
+                default=""
+                multiple="true"
+                showon="auto_send_invoice:1"
+                label="PLG_SOLIDRES_INVOICE_AUTO_SEND_PAYMENT_METHODS_LABEL"
+                description="PLG_SOLIDRES_INVOICE_AUTO_SEND_PAYMENT_METHODS_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="auto_regenerate_invoice_statuses"
+                type="statuses"
+                label="SR_AUTO_REGENERATE_INVOICE_STATUSES_LABEL"
+                description="SR_AUTO_REGENERATE_INVOICE_STATUSES_DESC"
+                scope="0"
+                statusType="0"
+                multiple="true"
+        />
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="enable_pdf_attachment"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="PLG_SOLIDRES_INVOICE_PDF_ATTACHMENT_LABEL"
+                description="PLG_SOLIDRES_INVOICE_PDF_ATTACHMENT_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field name="solidres_voucher_pdf_file_name" type="text"
+               default="voucher"
+               description="PLG_SOLIDRES_VOUCHER_PDF_FILE_NAME_DESC"
+               label="PLG_SOLIDRES_VOUCHER_PDF_FILE_NAME_LABEL"
+               showon="enable_pdf_attachment:1"
+        />
+
+        <field name="solidres_invoice_pdf_file_name" type="text"
+               default="Invoice"
+               description="PLG_SOLIDRES_INVOICE_PDF_FILE_NAME_DESC"
+               label="PLG_SOLIDRES_INVOICE_PDF_FILE_NAME_LABEL"
+        />
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field name="solidres_invoice_number_prefix" type="text"
+               default="INV"
+               description="PLG_SOLIDRES_INVOICE_NUMBER_PREFIX_DESC"
+               label="PLG_SOLIDRES_INVOICE_NUMBER_PREFIX_LABEL"
+        />
+        <field name="solidres_invoice_number_digit" type="text"
+               default="00"
+               description="PLG_SOLIDRES_INVOICE_NUMBER_DIGIT_DESC"
+               label="PLG_SOLIDRES_INVOICE_NUMBER_DIGIT_LABEL"
+        />
+        <field name="solidres_invoice_number_start" type="text"
+               default="1"
+               description="PLG_SOLIDRES_INVOICE_NUMBER_START_DESC"
+               label="PLG_SOLIDRES_INVOICE_NUMBER_START_LABEL"
+        />
+        <field name="solidres_invoice_number_override" type="text"
+               default=""
+               description="PLG_SOLIDRES_INVOICE_NUMBER_OVERRIDE_DESC"
+               label="PLG_SOLIDRES_INVOICE_NUMBER_OVERRIDE_LABEL"
+        />
+
+        <field type="note" label="PLG_SOLIDRES_INVOICE_PDF_NOTE"/>
+
+        <field name="solidres_invoice_layout" type="list"
+               default="1"
+               description="PLG_SOLIDRES_INVOICE_LAYOUT_DESC"
+               label="PLG_SOLIDRES_INVOICE_LAYOUT_LABEL">
+            <option value="1">SR_INVOICE_LAYOUT_1</option>
+            <option value="2">SR_INVOICE_LAYOUT_2</option>
+            <option value="3">SR_INVOICE_LAYOUT_3</option>
+        </field>
+
+        <field name="solidres_invoice_pdf_font_name_main" type="list"
+               default="dejavu sans"
+               description="PLG_SOLIDRES_INVOICE_PDF_FONT_NAME_MAIN_DESC"
+               label="PLG_SOLIDRES_INVOICE_PDF_FONT_NAME_MAIN_LABEL">
+            <option value="sans-serif">Sans serif</option>
+            <option value="times">Times</option>
+            <option value="times-roman">Times roman</option>
+            <option value="courier">Courier</option>
+            <option value="helvetica">Helvetica</option>
+            <option value="zapfdingbats">Zapfdingbats</option>
+            <option value="Serif">Serif</option>
+            <option value="monospace">Monospace</option>
+            <option value="fixed">Fixed</option>
+            <option value="dejavu sans">Dejavu sans</option>
+            <option value="dejavu sans mono">Dejavu sans mono</option>
+            <option value="dejavu serif">Dejavu serif</option>
+            <option value="freeserif">Free serif</option>
+            <option value="mgenplus">Mgen plus</option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="invoice_due_pay_email"
+                type="textarea"
+                label="SR_FIELD_INVOICE_DUE_PAY_EMAIL_LABEL"
+                description="SR_FIELD_INVOICE_DUE_PAY_EMAIL_DESC"
+                default="Hi,&#13;&#10;A new payment has been made by {firstname} {lastname} for invoice #{invoice}."
+                cols="50"
+                rows="10"/>
+        <field
+                name="invoice_cron_email"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="0"
+                label="SR_FIELD_INVOICE_CRON_EMAIL_LABEL"
+                description="SR_FIELD_INVOICE_CRON_EMAIL_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+                name="invoice_cron_days"
+                type="number"
+                min="0"
+                default="3"
+                label="SR_FIELD_INVOICE_CRON_DAYS_IN_ADVANCE_LABEL"
+                description="SR_FIELD_INVOICE_CRON_DAYS_IN_ADVANCE_DESC"
+                filter="intval"
+                showon="invoice_cron_email:1"/>
+        <field
+                type="text"
+                name="invoice_cron_email_subject"
+                label="SR_FIELD_INVOICE_CRON_EMAIL_SUBJECT_LABEL"
+                description="SR_FIELD_INVOICE_CRON_EMAIL_SUBJECT_DESC"
+                default="Payment reminder"
+                showon="invoice_cron_email:1"/>
+        <field
+                type="Editor_Shortcode"
+                name="invoice_cron_email_body"
+                label="SR_FIELD_INVOICE_CRON_EMAIL_BODY_LABEL"
+                description="SR_FIELD_INVOICE_CRON_EMAIL_BODY_DESC"
+                translate_default="true"
+                default="Dear {customer_name}&lt;br/&gt;&lt;br/&gt;This is an automated message to remind you the check-in time for your stay at {reservation_asset_name}: {checkin}. You can always drop your luggage at the Hotel, should you arrive earlier.&lt;br/&gt;&lt;br/&gt;Please remember to pay the remaining balance of {remaining_balance} before the arrival.&lt;br/&gt;&lt;br/&gt;Thank you,"
+                filter="safehtml"
+                showon="invoice_cron_email:1"/>
+    </fieldset>
+    <fieldset
+            name="hub"
+            addfieldpath="/administrator/components/com_solidres/models/fields"
+            label="SR_CONFIG_HUB_LABEL"
+            description="SR_CONFIG_HUB_DESC"
+    >
+        <field name="partner_user_groups" type="usergrouplist" default="4"
+               label="SR_FIELD_PARTNER_USER_GROUP_LABEL"
+               description="SR_FIELD_PARTNER_USER_GROUP_DESC"
+               multiple="true"
+        />
+
+        <field
+                name="google_map_static_api_key"
+                type="text"
+                default=""
+                label="SR_FIELD_GOOGLE_MAP_STATIC_API_LABEL"
+                description="SR_FIELD_GOOGLE_MAP_STATIC_API_DESC"/>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="show_sorting_bar"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_SORTING_BAR_LABEL"
+                description="SR_HUB_SHOW_SORTING_BAR_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="enable_slideshow_search"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_ENABLE_SLIDESHOW_SEARCH_LABEL"
+                description="SR_HUB_ENABLE_SLIDESHOW_SEARCH_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="number_slideshow_images"
+                type="text"
+                default="3"
+                showon="enable_slideshow_search:1"
+                label="SR_HUB_NUMBER_SLIDESHOW_IMAGES_LABEL"
+                description="SR_HUB_NUMBER_SLIDESHOW_IMAGES_DESC"/>
+
+        <field
+                name="number_viewed_assets"
+                type="text"
+                default="5"
+                label="SR_HUB_NUMBER_VIEWED_ASSETS_LABEL"
+                description="SR_HUB_NUMBER_VIEWED_ASSETS_DESC"/>
+
+        <field
+                name="show_unavailable_assets"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="0"
+                label="SR_HUB_SHOW_UNAVAILABLE_ASSETS_LABEL"
+                description="SR_HUB_SHOW_UNAVAILABLE_ASSETS_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="frontend_payment_method_manage"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_FRONTEND_PAYMENT_METHOD_MANAGE_LABEL"
+                description="SR_HUB_FRONTEND_PAYMENT_METHOD_MANAGE_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field type="note" label="SR_HUB_FILTER_OPTIONS"/>
+
+        <field
+                name="show_price_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_PRICE_FILTER_LABEL"
+                >
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="show_rating_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_RATING_FILTER_LABEL"
+                >
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="show_category_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_CATEGORY_FILTER_LABEL"
+                >
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="show_facility_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_FACILITY_FILTER_LABEL"
+                >
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="show_theme_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_THEME_FILTER_LABEL"
+                >
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="show_review_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_REVIEW_FILTER_LABEL"
+                >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="show_distance_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_DISTANCE_FILTER_LABEL"
+                >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="distance_filter_format"
+                type="list"
+                default="0"
+                showon="show_distance_filter:1"
+                label="SR_HUB_DISTANCE_FILTER_FORMAT_LABEL"
+                description="SR_HUB_DISTANCE_FILTER_FORMAT_DESC">
+            <option value="slider">SR_HUB_DISTANCE_FILTER_FORMAT_SLIDER</option>
+            <option value="dropdown">SR_HUB_DISTANCE_FILTER_FORMAT_DROPDOWN</option>
+        </field>
+
+        <field
+                name="distance_filter_dropdown_range"
+                type="textarea"
+                label="SR_HUB_DISTANCE_FILTER_DROPDOWN_RANGE_LABEL"
+                description="SR_HUB_DISTANCE_FILTER_DROPDOWN_RANGE_DESC"
+                cols="15"
+                rows="5"
+                default="0-100&#13;&#10;101-300&#13;&#10;301-500&#13;&#10;501-1000"
+                showon="distance_filter_format:dropdown"/>
+
+        <field
+                name="show_tag_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_TAG_FILTER_LABEL"
+                >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="show_static_price_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="0"
+                label="SR_HUB_SHOW_STATIC_PRICE_FILTER_LABEL"
+                >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="show_guest_number_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="0"
+                label="SR_HUB_SHOW_GUEST_NUMBER_FILTER_LABEL"
+                >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="guest_number_filter_format"
+                type="list"
+                default="input"
+                showon="show_guest_number_filter:1"
+                label="SR_HUB_GUEST_NUMBER_FILTER_FORMAT_LABEL"
+        >
+            <option value="input">Input</option>
+            <option value="select">Dropdown</option>
+        </field>
+
+        <field
+                name="show_bedroom_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="0"
+                label="SR_HUB_SHOW_BEDROOM_FILTER_LABEL"
+                >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="bedroom_filter_format"
+                type="list"
+                default="input"
+                showon="show_bedroom_filter:1"
+                label="SR_HUB_BEDROOM_FILTER_FORMAT_LABEL"
+        >
+            <option value="input">Input</option>
+            <option value="select">Dropdown</option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="access_denied_msg_location"
+                type="list"
+                default="0"
+                label="SR_HUB_ACCESS_DENIED_MSG_LOCATION_LABEL"
+                description="SR_HUB_ACCESS_DENIED_MSG_LOCATION_DESC">
+            <option
+                    value="0">SR_HUB_ACCESS_DENIED_MSG_LOCATION_ASSET_PAGE
+            </option>
+            <option
+                    value="1">SR_HUB_ACCESS_DENIED_MSG_LOCATION_SEARCH_PAGE
+            </option>
+        </field>
+
+        <field
+                name="show_wishlist"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_WISHLIST_LABEL"
+                description="SR_HUB_SHOW_WISHLIST_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="show_sharing"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_SHARING_LABEL"
+                description="SR_HUB_SHOW_SHARING_DESC">
+            <option
+                    value="0">JNO
+            </option>
+            <option
+                    value="1">JYES
+            </option>
+        </field>
+
+        <field
+                name="surrounding_nearby"
+                type="text"
+                label="SR_HUB_SURROUNDINGS_NEARBY_KM_LABEL"
+                description="SR_HUB_SURROUNDINGS_NEARBY_KM_LABEL"
+                filter="float"/>
+
+        <field
+                name="user_logout_redirect"
+                type="modal_menu"
+                label="SR_HUB_USER_LOGOUT_REDIRECT_LABEL"
+                description="SR_HUB_USER_LOGOUT_REDIRECT_DESC"
+                addfieldpath="/administrator/components/com_menus/models/fields"
+                disable="separator,alias,heading,url"
+                select="true"
+                new="true"
+                edit="true"
+                clear="true"
+                filter="uint">
+            <option value="">SR_MENU_SELECT</option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                name="enableSubscription"
+                label="SR_FIELD_ENABLE_SUBSCRIPTION"
+                default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                name="autoApprovalFreeSubscription"
+                label="SR_FIELD_AUTO_APPROVAL_FREE_SUBSCRIPTION"
+                default="1"
+                showon="enableSubscription:1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="countrytaxlevel"
+                name="taxCountry"
+                state="taxCountryState"
+                label="SR_FIELD_SUBSCRIPTION_TAX_COUNTRY_LABEL"
+                showon="enableSubscription:1"
+        />
+        <field
+                type="list"
+                name="taxCountryState"
+                label="SR_FIELD_SUBSCRIPTION_TAX_GEOSTATE_LABEL"
+                showon="enableSubscription:1"
+        />
+
+        <field
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                name="enableCommission"
+                label="SR_FIELD_ENABLE_COMMISSION"
+                default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                name="commissionRatePerProperty"
+                label="SR_FIELD_ENABLE_COMMISSION_RATE_PER_PROPERTY"
+                description="SR_FIELD_ENABLE_COMMISSION_RATE_PER_PROPERTY_DESC"
+                default="0"
+                showon="enableCommission:1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                name="assetApproval"
+                label="SR_FIELD_ASSET_SUBMISSION_APPROVAL"
+                default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+                type="text"
+                name="notifyCommissionEditEmail"
+                label="SR_FIELD_NOTIFY_COMMISSION_EDIT_EMAIL"
+                description="SR_FIELD_NOTIFY_COMMISSION_EDIT_EMAIL_DESC"
+                default=""
+                showon="enableCommission:1[OR]assetApproval:1"
+        />
+        <field
+                type="text"
+                name="commissionEmailFacebook"
+                label="SR_FIELD_COMMISSION_EMAIL_FACEBOOK"
+                showon="enableCommission:1[OR]assetApproval:1"
+        />
+        <field
+                type="text"
+                name="commissionEmailTwitter"
+                label="SR_FIELD_COMMISSION_EMAIL_TWITTER"
+                showon="enableCommission:1[OR]assetApproval:1"
+        />
+        <field
+                type="media"
+                name="commissionEmailLogo"
+                label="SR_FIELD_COMMISSION_EMAIL_LOGO"
+                showon="enableCommission:1[OR]assetApproval:1"
+        />
+        <field
+                type="text"
+                name="commissionContactAddress"
+                label="SR_FIELD_COMMISSION_EMAIL_CONTACT_ADDRESS"
+                showon="enableCommission:1[OR]assetApproval:1"
+        />
+        <field
+                type="text"
+                name="commissionContactPhone"
+                label="SR_FIELD_COMMISSION_EMAIL_CONTACT_PHONE"
+                showon="enableCommission:1[OR]assetApproval:1"
+        />
+        <field
+                type="text"
+                name="commissionContactMobile"
+                label="SR_FIELD_COMMISSION_EMAIL_CONTACT_MOBILE"
+                showon="enableCommission:1[OR]assetApproval:1"
+        />
+        <field
+                type="text"
+                name="commissionContactEmail"
+                label="SR_FIELD_COMMISSION_EMAIL_CONTACT_Email"
+                showon="enableCommission:1[OR]assetApproval:1"
+        />
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="email_receive_reporting"
+                type="textarea"
+                label="SR_HUB_EMAIL_RECEIVE_REPORTING"
+        />
+
+        <!--<field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+            type="Solidres_Ignore_hub_fields"
+            name="ignoreHubFields"
+            multiple="true"
+            label="SR_HUB_IGNORE_FIELDS_LABEL"
+            size="15"
+        />-->
+
+    </fieldset>
+
+    <fieldset name="feedback_score" label="SR_CONFIG_FEEDBACKS">
+        <field
+                name="feedback_target_itemid"
+                type="menuitem"
+                label="SR_FEEDBACK_TARGET_ITEMID_LABEL"
+                description="SR_FEEDBACK_TARGET_ITEMID_DESC" />
+        <field
+                type="list"
+                name="feedback_max_scores"
+                label="SR_CONFIG_FEEDBACKS_MAX_SCORES"
+                default="10"
+                filter="uint">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="100">100</option>
+        </field>
+        <field
+                type="integer"
+                name="feedback_default_score"
+                label="SR_CONFIG_FEEDBACKS_DEFAULT_SCORE"
+                first="1"
+                last="100"
+                step="1"
+                default="5"/>
+        <field
+                name="feedback_notification_owner_email"
+                type="textarea"
+                label="SR_CONFIG_FEEDBACK_NOTIFICATION_OWNER_EMAIL_LABEL"
+                description="SR_CONFIG_FEEDBACK_NOTIFICATION_OWNER_EMAIL_DESC"
+                cols="50"
+                rows="10"
+                default="Hi,&#13;&#10;&#13;&#10;A customer has submitted a feedback for their reservation {res_code} - {asset_exp_name}.&#13;&#10;&#13;&#10;Sincerely,"/>
+        <field
+                name="asset_status_trigger_feedback_email"
+                type="statuses"
+                label="SR_ASSET_RESERVATION_STATUS_TRIGGER_EMAIL_LABEL"
+                description="SR_ASSET_RESERVATION_STATUS_TRIGGER_EMAIL_DESC"
+                scope="0"
+                statusType="0"
+                default="2"/>
+        <field
+                name="exp_status_trigger_feedback_email"
+                type="statuses"
+                label="SR_EXP_RESERVATION_STATUS_TRIGGER_EMAIL_LABEL"
+                description="SR_EXP_RESERVATION_STATUS_TRIGGER_EMAIL_DESC"
+                scope="1"
+                statusType="0"
+                default="0"/>
+    </fieldset>
+    <fieldset name="experience" label="SR_CONFIG_EXPERIENCES">
+        <field
+                name="default_exp_reservation_state"
+                type="statuses"
+                label="SR_EXP_DEFAULT_RESERVATION_STATUS_LABEL"
+                description="SR_EXP_DEFAULT_RESERVATION_STATUS_DESC"
+                scope="1"
+                statusType="0"
+                default="3"
+                required="true"
+        />
+        <field
+                name="exp_confirm_state"
+                type="statuses"
+                label="SR_EXP_CONFIRM_STATE_LABEL"
+                description="SR_EXP_CONFIRM_STATE_DESC"
+                scope="1"
+                statusType="0"
+                default="1"
+                required="true"
+        />
+        <field
+                name="exp_payment_confirm_state"
+                type="statuses"
+                label="SR_EXP_PAYMENT_CONFIRM_STATE_LABEL"
+                description="SR_EXP_PAYMENT_CONFIRM_STATE_DESC"
+                scope="1"
+                statusType="1"
+                default="1"
+                required="true"
+        />
+        <field
+                name="exp_payment_pending_state"
+                type="statuses"
+                label="SR_EXP_PAYMENT_PENDING_STATE_LABEL"
+                description="SR_EXP_PAYMENT_PENDING_STATE_DESC"
+                scope="1"
+                statusType="1"
+                default="3"
+                required="true"
+        />
+        <field
+                name="exp_cancelled_state"
+                type="statuses"
+                label="SR_EXP_CANCELLATION_STATE_LABEL"
+                description="SR_EXP_CANCELLATION_STATE_DESC"
+                scope="1"
+                statusType="0"
+                default="2"
+                required="true"
+        />
+        <field
+                name="exp_payment_cancelled_state"
+                type="statuses"
+                label="SR_EXP_PAYMENT_CANCELLATION_STATE_LABEL"
+                description="SR_EXP_PAYMENT_CANCELLATION_STATE_DESC"
+                scope="1"
+                statusType="1"
+                default="2"
+                required="true"
+        />
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="show_exp_participants_left"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_PARTICIPANTS_LEFT_LABEL"
+                description="SR_HUB_SHOW_PARTICIPANTS_LEFT_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="exp_send_email_on_reservation_state_change"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="SR_SEND_EMAIL_ON_RESERVATION_STATE_CHANGE_LABEL"
+                description="SR_SEND_EMAIL_ON_RESERVATION_STATE_CHANGE_DESC"
+                default="1"
+                filter="uint">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="exp_status_trigger_reservation_state_change_email"
+                type="statuses"
+                label="SR_STATUS_TRIGGER_RESERVATION_STATE_CHANGE_EMAIL_LABEL"
+                description="SR_STATUS_TRIGGER_RESERVATION_STATE_CHANGE_EMAIL_DESC"
+                scope="1"
+                statusType="0"
+                multiple="true"
+                showon="exp_send_email_on_reservation_state_change:1"
+        />
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="exp_time_format_24h"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="SR_TIME_FORMAT_24H_LABEL"
+                description="SR_TIME_FORMAT_24H_DESC"
+                default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="show_exp_sorting_bar"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_EXP_SHOW_SORTING_BAR_LABEL"
+                description="SR_EXP_SHOW_SORTING_BAR_DESC"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="show_exp_category_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_EXP_SHOW_CATEGORY_FILTER_LABEL"
+                description="SR_HUB_EXP_SHOW_CATEGORY_FILTER_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="show_exp_partner_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_EXP_SHOW_PARTNER_FILTER_LABEL"
+                description="SR_HUB_EXP_SHOW_PARTNER_FILTER_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="show_exp_transportation_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_TRANSPORTATION_FILTER_LABEL"
+                description="SR_HUB_SHOW_TRANSPORTATION_FILTER_DESC"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="show_exp_range_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_EXP_SHOW_RANGE_FILTER_LABEL"
+                description="SR_HUB_EXP_SHOW_RANGE_FILTER_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="show_exp_review_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_REVIEW_FILTER_LABEL"
+                >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="show_exp_duration_days_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_EXP_SHOW_DURATION_DAYS_FILTER_LABEL"
+                description="SR_HUB_EXP_SHOW_DURATION_DAYS_FILTER_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="duration_days"
+                type="textarea"
+                label="SR_HUB_EXP_FILTER_DURATION_DAYS_LABEL"
+                description="SR_HUB_EXP_FILTER_DURATION_DAYS_DESC"
+                cols="15"
+                rows="5"
+                default="1-3&#13;&#10;3-5&#13;&#10;5-8&#13;&#10;8-10"
+                showon="show_exp_duration_days_filter:1"/>
+
+        <field
+                name="show_exp_duration_hours_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_EXP_SHOW_DURATION_HOURS_FILTER_LABEL"
+                description="SR_HUB_EXP_SHOW_DURATION_HOURS_FILTER_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="duration_hours"
+                type="textarea"
+                label="SR_HUB_EXP_FILTER_DURATION_HOURS_LABEL"
+                description="SR_HUB_EXP_FILTER_DURATION_HOURS_DESC"
+                cols="15"
+                rows="5"
+                default="1-3&#13;&#10;3-5&#13;&#10;5-8&#13;&#10;8-10"
+                showon="show_exp_duration_hours_filter:1"/>
+
+        <field
+                name="show_exp_distance_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_DISTANCE_FILTER_LABEL"
+                >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="show_exp_tag_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_TAG_FILTER_LABEL"
+                >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="show_exp_country_filter"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                default="1"
+                label="SR_HUB_SHOW_COUNTRY_FILTER_LABEL"
+                description="SR_HUB_SHOW_COUNTRY_FILTER_DESC"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="exp_chart_sales_type"
+                type="list"
+                label="SR_EXP_DASHBOARD_CHART_SALES_TYPE_LABEL"
+                default="line">
+            <option value="line">SR_EXP_DASHBOARD_CHART_LINE</option>
+            <option value="bar">SR_EXP_DASHBOARD_CHART_BAR</option>
+        </field>
+        <field
+                name="exp_chart_top_type"
+                type="list"
+                label="SR_EXP_DASHBOARD_CHART_TOP_TYPE_LABEL"
+                default="horizontalBar">
+            <option value="line">SR_EXP_DASHBOARD_CHART_LINE</option>
+            <option value="bar">SR_EXP_DASHBOARD_CHART_BAR</option>
+            <option value="horizontalBar">SR_EXP_DASHBOARD_CHART_HORIZONTAL_BAR</option>
+        </field>
+        <field
+                name="exp_chart_top_limit"
+                type="number"
+                label="SR_EXP_DASHBOARD_CHART_TOP_LIMIT_LABEL"
+                min="5"
+                step="1"
+                default="10"
+                filter="uint"/>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="exp_custom_field_reservation_list_view"
+                type="textarea"
+                label="SR_EXP_CUSTOM_FIELDS_LIST_VIEW_LABEL"
+                description="SR_EXP_CUSTOM_FIELDS_LIST_VIEW_DESC"
+                cols="50"
+                rows="10"
+                default=""/>
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="exp_toc_format"
+                type="list"
+                label="SR_TERMS_CONDITIONS_FORMAT_LABEL"
+                description="SR_TERMS_CONDITIONS_FORMAT_DESC"
+                default="0"
+                filter="uint">
+            <option value="0">SR_TERMS_CONDITIONS_FORMAT_ARTICLE</option>
+            <option value="1">SR_TERMS_CONDITIONS_FORMAT_URL</option>
+        </field>
+
+        <field
+                name="exp_toc_article"
+                type="Modal_Article"
+                label="SR_FIELD_SELECT_ARTICLE_TERMS_OF_USE_LABEL"
+                description="SR_FIELD_SELECT_ARTICLE_TERMS_OF_USE_DESC"
+                filter="uint"
+                showon="exp_toc_format:0"
+                required="false"
+                select="true"
+                new="true"
+                edit="true"
+                clear="true"
+        />
+
+        <field
+                name="exp_privacy_article"
+                type="Modal_Article"
+                label="SR_FIELD_SELECT_ARTICLE_PRIVACY_POLICY_LABEL"
+                description="SR_FIELD_SELECT_ARTICLE_PRIVACY_POLICY_DESC"
+                filter="uint"
+                showon="exp_toc_format:0"
+                required="false"
+                select="true"
+                new="true"
+                edit="true"
+                clear="true"
+        />
+
+        <field
+                name="exp_toc_url"
+                type="text"
+                label="SR_FIELD_SELECT_ARTICLE_TERMS_OF_USE_URL_LABEL"
+                description="SR_FIELD_SELECT_ARTICLE_TERMS_OF_USE_URL_DESC"
+                showon="exp_toc_format:1"
+        />
+
+        <field
+                name="exp_privacy_url"
+                type="text"
+                label="SR_FIELD_SELECT_ARTICLE_PRIVACY_POLICY_URL_LABEL"
+                description="SR_FIELD_SELECT_ARTICLE_PRIVACY_POLICY_URL_DESC"
+                showon="exp_toc_format:1"
+        />
+
+        <field
+                type="spacer"
+                hr="true"
+        />
+
+        <field
+                name="exp_slideshow_thumb_size"
+                type="text"
+                default="650x300"
+                label="SR_EXP_SLIDESHOW_THUMB_SIZE_LABEL"
+                description="SR_EXP_MEDIA_THUMB_SIZE_DESC"
+                validate_regex="^[1-9][0-9]+x[1-9][0-9]+$"
+                validate="regex"
+                message="SR_EXP_MEDIA_EXP_SLIDESHOW_THUMB_SIZES_WARN"
+        />
+
+        <field
+                name="exp_gallery_thumb_size"
+                type="text"
+                default="120x120"
+                label="SR_EXP_GALLERY_THUMB_SIZE_LABEL"
+                description="SR_EXP_MEDIA_THUMB_SIZE_DESC"
+                validate_regex="^[1-9][0-9]+x[1-9][0-9]+$"
+                validate="regex"
+                message="SR_EXP_MEDIA_EXP_GALLERY_THUMB_SIZES_WARN"
+        />
+    </fieldset>
+    <fieldset
+            name="statistics"
+            label="SR_CONFIG_STATISTICS">
+        <field
+                name="default_dashboard_statuses"
+                type="statuses"
+                label="SR_DEFAULT_DASHBOARD_STATUSES_LABEL"
+                description="SR_DEFAULT_DASHBOARD_STATUSES_DESC"
+                scope="0"
+                statusType="0"
+                multiple="true"
+        />
+        <field
+                name="statistics_statuses"
+                type="statuses"
+                label="SR_DASHBOARD_STATUSES_LABEL"
+                description="SR_DASHBOARD_STATUSES_DESC"
+                scope="0"
+                statusType="0"
+                multiple="true"
+        />
+        <field
+                name="statistics_refresh_seconds"
+                type="number"
+                label="SR_DASHBOARD_REFRESH_IN_SECOND_LABEL"
+                description="SR_DASHBOARD_REFRESH_IN_SECOND_DESC"
+                min="0"
+                filter="uint"
+                default="60"
+        />
+        <field
+                name="statistics_widget_theme"
+                type="list"
+                label="SR_STATISTICS_WIDGET_THEME_LABEL"
+                description="SR_STATISTICS_WIDGET_THEME_DESC"
+                default="default">
+            <option value="default">SR_STATISTICS_WIDGET_DEFAULT</option>
+            <option value="light">SR_STATISTICS_WIDGET_LIGHT</option>
+            <option value="dark">SR_STATISTICS_WIDGET_DARK</option>
+        </field>
+    </fieldset>
+    <fieldset name="liveupdate" label="SR_CONFIG_LIVEUPDATE" description="SR_CONFIG_LIVEUPDATE_DESC">
+        <field
+                name="download_id"
+                type="text"
+                default=""
+                size="30"
+                label="SR_DOWNLOAD_ID_LABEL"
+                description="SR_DOWNLOAD_ID_DESC"/>
+    </fieldset>
+    <fieldset name="integrations" label="SR_CONFIG_INTEGRATIONS">
+        <field
+                name="map_provider"
+                type="list"
+                label="SR_CONFIG_MAP_PROVIDER_LABEL"
+                description="SR_CONFIG_MAP_PROVIDER_DESC"
+                default="GGM">
+            <option value="OSM">SR_CONFIG_MAP_OSM</option>
+            <option value="GGM">SR_CONFIG_MAP_GGM</option>
+        </field>
+        <field
+                name="google_map_api_key"
+                type="text"
+                default=""
+                label="SR_FIELD_GOOGLE_MAP_API_LABEL"
+                description="SR_FIELD_GOOGLE_MAP_API_DESC"
+                showon="map_provider:GGM"/>
+
+        <field
+                name="facebook_app_id"
+                type="text"
+                label="SR_HUB_SOLIDRES_FACEBOOK_APP_ID_LABEL"
+                description="SR_HUB_SOLIDRES_FACEBOOK_APP_ID_DESC"/>
+    </fieldset>
+    <fieldset
+            name="permissions"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            description="JCONFIG_PERMISSIONS_DESC"
+    >
+
+        <field
+                name="rules"
+                type="rules"
+                label="JCONFIG_PERMISSIONS_LABEL"
+                filter="rules"
+                component="com_solidres"
+                section="component">
+
+        </field>
+    </fieldset>
+</config>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension
+	type="module"
+	client="site"
+	method="upgrade">
+	<name>mod_sr_currency</name>
+	<creationDate>Dec 2024</creationDate>
+	<author>Solidres Team</author>
+	<authorEmail>contact@solidres.com</authorEmail>
+	<authorUrl>https://www.solidres.com</authorUrl>
+	<copyright>(C) 2013 - 2020 Solidres. All Rights Reserved.</copyright>
+	<license>GNU General Public License version 3, or later</license>
+	<version>3.2.2</version>
+	<description>MOD_SR_CURRENCY_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sr_currency">mod_sr_currency.php</filename>
+		<filename>mod_sr_currency.xml</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+                <field
+                        name="show_code_symbol"
+                        type="list"
+                        default="0"
+                        label="SR_CURRENCY_SHOW_CODE_SYMBOL_LABEL"
+                        description="SR_CURRENCY_SHOW_CODE_SYMBOL_DESC">
+                    <option
+                            value="0">SR_CURRENCY_SHOW_CODE</option>
+                    <option
+                            value="1">SR_CURRENCY_SHOW_SYMBOL</option>
+                </field>
+			</fieldset>
+			<fieldset
+					name="advanced">
+				<field
+						name="layout"
+						type="modulelayout"
+						label="JFIELD_ALT_LAYOUT_LABEL"
+						class="form-select"
+						validate="moduleLayout"
+				/>
+
+				<field
+						name="moduleclass_sfx"
+						type="textarea"
+						rows="3"
+						label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+						validate="CssIdentifier"/>
+
+				<field
+						name="cache"
+						type="list"
+						default="1"
+						label="COM_MODULES_FIELD_CACHING_LABEL"
+						description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+							value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+							value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+						name="cache_time"
+						type="text"
+						default="900"
+						label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+						description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+						name="cachemode"
+						type="hidden"
+						default="static">
+					<option
+							value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,1 @@
+ALTER TABLE `#__sr_room_types` ADD `occupancy_child_age_range` TINYINT(2) UNSIGNED NOT NULL DEFAULT '0' AFTER `occupancy_child`;

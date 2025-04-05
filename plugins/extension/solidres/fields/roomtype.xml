@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="roomtype_custom_fields">
+
+        <fieldset name="conditions" label="SR_PLG_EXT_ROOMTYPE_CONDITIONS">
+            <field
+                name="taxes"
+                type="text"
+                id="taxes"
+                label="SR_PLG_EXT_ROOM_TYPE_FIELD_TAXES_LABEL"
+                description="SR_PLG_EXT_ROOM_TYPE_FIELD_TAXES_DESC"
+                filter="safehtml"
+
+                />
+
+            <field
+                name="prepayment"
+                type="text"
+                id="prepayment"
+                label="SR_PLG_EXT_ROOM_TYPE_FIELD_PREPAYMENT_LABEL"
+                description="SR_PLG_EXT_ROOM_TYPE_FIELD_PREPAYMENT_DESC"
+                filter="safehtml"
+
+                />
+
+        </fieldset>
+
+        <fieldset name="facilities" label="SR_PLG_EXT_ROOMTYPE_FACILITIES">
+            <field
+                name="room_facilities"
+                type="textarea"
+                rows="5"
+                cols="100"
+                id="room_facilities"
+                label="SR_PLG_EXT_ROOM_TYPE_FIELD_FACILITIES_ROOM_LABEL"
+                description="SR_PLG_EXT_ROOM_TYPE_FIELD_FACILITIES_ROOM_DESC"
+                filter="safehtml"
+
+                />
+
+            <field
+                name="room_size"
+                type="text"
+                id="room_size"
+                label="SR_PLG_EXT_ROOM_TYPE_FIELD_FACILITIES_ROOM_SIZE_LABEL"
+                description="SR_PLG_EXT_ROOM_TYPE_FIELD_FACILITIES_ROOM_SIZE_DESC"
+                filter="safehtml"
+                />
+
+            <field
+                name="bed_size"
+                type="text"
+                id="bed_size"
+                label="SR_PLG_EXT_ROOM_TYPE_FIELD_FACILITIES_BED_SIZE_LABEL"
+                description="SR_PLG_EXT_ROOM_TYPE_FIELD_FACILITIES_BED_SIZE_DESC"
+                filter="safehtml"
+
+                />
+        </fieldset>
+	</fields>
+</form>

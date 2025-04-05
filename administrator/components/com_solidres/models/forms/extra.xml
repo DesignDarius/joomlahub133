@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <config>
+        <inlinehelp button="show"/>
+    </config>
+    <fieldset name="general">
+
+        <field name="id" type="hidden" default="0"/>
+        <field name="currency_id" type="hidden"/>
+        <field name="scope" type="hidden" default="0" value="0"/>
+        <field
+                name="name"
+                type="text"
+                label="SR_FIELD_EXTRA_NAME_LABEL"
+                description="SR_FIELD_EXTRA_NAME_DESC"
+                required="true"/>
+
+        <field
+                name="mandatory"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="SR_FIELD_EXTRA_MANDATORY_LABEL"
+                description="SR_FIELD_EXTRA_MANDATORY_DESC"
+                default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+
+        </field>
+
+        <field
+                name="charge_type"
+                type="chargetype"
+                label="SR_FIELD_EXTRA_CHARGE_TYPE_LABEL"
+                description="SR_FIELD_EXTRA_CHARGE_TYPE_DESC"
+                default="0"/>
+        <field
+                name="max_quantity"
+                type="text"
+                label="SR_FIELD_EXTRA_MAX_QUANTITY_LABEL"
+                description="SR_FIELD_EXTRA_MAX_QUANTITY_DESC"
+                default=""/>
+        <field
+                name="daily_chargable"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="SR_FIELD_EXTRA_MAX_CHARGEABLE_LABEL"
+                description="SR_FIELD_EXTRA_MAX_CHARGEABLE_DESC"
+                default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="price"
+                type="text"
+                label="SR_FIELD_EXTRA_PRICE_LABEL"
+                description="SR_FIELD_EXTRA_PRICE_DESC"/>
+
+        <field
+                name="price_adult"
+                type="text"
+                label="SR_FIELD_EXTRA_PRICE_ADULT_LABEL"
+                description="SR_FIELD_EXTRA_PRICE_ADULT_DESC"/>
+
+        <field
+                name="price_child"
+                type="text"
+                label="SR_FIELD_EXTRA_PRICE_CHILD_LABEL"
+                description="SR_FIELD_EXTRA_PRICE_CHILD_DESC"/>
+
+        <field
+                name="reservation_asset_id"
+                type="reservationasset"
+                label="SR_PROPERTY"
+                description="SR_FIELD_EXTRA_RESERVATION_ASSET_DESC"
+                class="asset_tax_select"
+                required="true"/>
+
+        <field
+                name="state"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="JSTATUS"
+                default="1">
+            <option value="0">JUNPUBLISHED</option>
+            <option value="1">JPUBLISHED</option>
+        </field>
+
+        <field
+                name="access"
+                type="accesslevel"
+                label="JFIELD_ACCESS_LABEL"
+                description="JFIELD_ACCESS_DESC"
+        />
+
+        <field name="price_includes_tax"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               default="0"
+               label="SR_FIELD_PRICE_INCLUDE_TAX_LABEL"
+               description="SR_FIELD_PRICE_INCLUDE_TAX_DESC"
+
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="description"
+                type="textarea"
+                rows="5"
+                cols="150"
+                label="JGLOBAL_DESCRIPTION"
+                description="SR_FIELD_EXTRA_DESCRIPTION_DESC"
+                filter="safehtml"
+                buttons="false"
+                width="71%"/>
+
+        <field
+                name="tax_id"
+                type="tax"
+                label="SR_TAX_FIELD_TAX_LABEL"
+                description="SR_TAX_FIELD_TAX_DESC"
+                class="tax_select"/>
+
+        <field
+                name="coupon_id"
+                type="checkboxcoupon"
+                scope="extra"
+                label="SR_FIELD_EXTRA_COUPON_LABEL"
+                description="SR_FIELD_EXTRA_COUPON_DESC"/>
+
+    </fieldset>
+    <fields name="params">
+        <fieldset
+                name="articles"
+                label="JGLOBAL_ARTICLES"
+                addfieldprefix="Joomla\Component\Content\Administrator\Field"
+        >
+
+            <field
+                    name="article"
+                    type="modal_article"
+                    label="SR_FIELD_SELECT_ARTICLE_FOR_EXTRA_LABEL"
+                    required="false"
+                    description="SR_FIELD_SELECT_ARTICLE_FOR_EXTRA_DESC"/>
+
+        </fieldset>
+
+        <fieldset name="display" label="" addfieldpath="/administrator/components/com_solidres/models/fields">
+            <field
+                    name="image"
+                    type="Solidres_Media"
+                    label="SR_EXTRA_IMG_LABEL"
+                    description="SR_EXTRA_IMG_DESC"
+                    mediaType="PRO_EXTRA"
+            />
+
+        </fieldset>
+        <fieldset name="earlyarrival" label="" addfieldpath="/administrator/components/com_solidres/models/fields">
+            <field
+                    name="previous_checkout_distance"
+                    type="text"
+                    label="SR_EXTRA_PREVIOUS_CHECKOUT_LABEL"
+                    description="SR_EXTRA_PREVIOUS_CHECKOUT_DESC"
+                    default=""/>
+        </fieldset>
+        <field
+                name="enable_available_dates"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="SR_EXTRA_ENABLE_AVAILABLE_DATES"
+                default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+                name="available_dates"
+                type="AvailableDate"
+                label="SR_EXTRA_AVAILABLE_DATES"
+                addfieldpath="/plugins/solidres/advancedextra/libraries/field"
+                showon="enable_available_dates:1"
+        />
+    </fields>
+</form>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<access component="com_solidres">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" />
+		<action name="core.manage" title="JACTION_MANAGE" />
+		<action name="core.create" title="JACTION_CREATE" />
+		<action name="core.delete" title="JACTION_DELETE" />
+		<action name="core.edit" title="JACTION_EDIT" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" />
+	</section>
+	<section name="category">
+		<action name="core.create" title="JACTION_CREATE" />
+		<action name="core.delete" title="JACTION_DELETE" />
+		<action name="core.edit" title="JACTION_EDIT" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" />
+	</section>
+	<section name="acl">
+		<action name="core.reservation.manage" title="SR_RESERVATION_ACCESS_MANAGE"
+				description="SR_RESERVATION_ACCESS_DESC"/>
+		<action name="core.invoice.manage" title="SR_INVOICE_ACCESS_MANAGE"
+				description="SR_INVOICE_ACCESS_MANAGE_DESC"/>
+		<action name="core.reservation_asset.manage" title="SR_RESERVATION_ASSET_ACCESS_MANAGE"
+				description="SR_RESERVATION_ASSET_ACCESS_DESC"/>
+		<action name="core.customer.manage" title="SR_CUSTOMER_ACCESS_MANAGE"
+				description="SR_CUSTOMER_ACCESS_DESC"/>
+		<action name="core.customer_customfield.manage" title="SR_CUSTOMER_FIELDS_ACCESS_MANAGE"
+				description="SR_CUSTOMER_FIELDS_DESC"/>
+		<action name="core.room_type.manage" title="SR_ROOM_TYPE_ACCESS_MANAGE"
+				description="SR_ROOM_TYPE_ACCESS_DESC"/>
+		<action name="core.coupon_extra.manage" title="SR_COUPON_EXTRA_ACCESS_MANAGE"
+				description="SR_COUPON_EXTRA_ACCESS_DESC"/>
+		<action name="core.feedback.manage" title="SR_FEEDBACK_ACCESS_MANAGE"
+				description="SR_FEEDBACK_ACCESS_DESC"/>
+		<action name="core.subscription.manage" title="SR_SUBSCRIPTION_ACCESS_MANAGE"
+				description="SR_SUBSCRIPTION_ACCESS_DESC"/>
+		<action name="core.system.manage" title="SR_SYSTEM_ACCESS_MANAGE"
+				description="SR_SYSTEM_ACCESS_DESC"/>
+		<action name="core.experience.manage" title="SR_EXPERIENCE_ACCESS_MANAGE"
+				description="SR_EXPERIENCE_ACCESS_DESC"/>
+		<action name="core.limitbooking.manage" title="SR_LIMITBOOKING_ACCESS_MANAGE"
+				description="SR_LIMITBOOKING_ACCESS_MANAGE_DESC"/>
+		<action name="core.housekeeping.manage" title="SR_HOUSEKEEPING_ACCESS_MANAGE"
+				description="SR_HOUSEKEEPING_ACCESS_MANAGE_DESC"/>
+	</section>
+</access>

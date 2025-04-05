@@ -1,0 +1,164 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "com_solidres",
+  "version": "3.2.2",
+  "description": "SOLIDRES - Accommodation booking extension for Joomla!",
+  "license": "GPL-3.0-or-later",
+  "assets": [
+    {
+      "name": "com_solidres.no-conflict",
+      "type": "script",
+      "uri": "com_solidres/assets/noconflict.js",
+      "dependencies": [
+        "core",
+        "jquery"
+      ],
+      "version": "07c01f92f8cc36c71e58a8ad0fb8639d"
+    },
+    {
+      "name": "com_solidres.jquery-ui",
+      "type": "script",
+      "uri": "com_solidres/assets/jquery/ui/jquery-ui.min.js",
+      "dependencies": [
+        "jquery"
+      ],
+      "version": "1.14.0"
+    },
+    {
+      "name": "com_solidres.jquery-ui",
+      "type": "style",
+      "uri": "com_solidres/assets/jquery/themes/base/jquery-ui.min.css",
+      "version": "1.14.0"
+    },
+    {
+      "name": "com_solidres.jquery-validate",
+      "type": "script",
+      "uri": "com_solidres/assets/validate/jquery.validate.min.js",
+      "dependencies": [
+        "core",
+        "jquery"
+      ],
+      "version": "1.19.5"
+    },
+    {
+      "name": "com_solidres.jquery-validate-additional-methods",
+      "type": "script",
+      "uri": "com_solidres/assets/validate/additional-methods.min.js",
+      "dependencies": [
+        "core",
+        "jquery",
+        "com_solidres.jquery-validate"
+      ],
+      "version": "1.19.5"
+    },
+    {
+      "name": "com_solidres.admin",
+      "type": "script",
+      "uri": "com_solidres/assets/admin.min.js",
+      "dependencies": [
+        "core",
+        "com_solidres.no-conflict"
+      ],
+      "version": "07c01f92f8cc36c71e58a8ad0fb8639d"
+    },
+    {
+      "name": "com_solidres.common",
+      "type": "script",
+      "uri": "com_solidres/assets/common.min.js",
+      "dependencies": [
+        "core",
+        "com_solidres.no-conflict",
+        "com_solidres.jquery-validate",
+        "com_solidres.jquery-validate-additional-methods",
+        "bootstrap.popover"
+      ],
+      "version": "07c01f92f8cc36c71e58a8ad0fb8639d"
+    },
+    {
+      "name": "com_solidres.site",
+      "type": "script",
+      "uri": "com_solidres/assets/site.min.js",
+      "dependencies": [
+        "core",
+        "com_solidres.no-conflict"
+      ],
+      "version": "07c01f92f8cc36c71e58a8ad0fb8639d"
+    },
+    {
+      "name": "com_solidres.wishlist",
+      "type": "script",
+      "uri": "com_solidres/assets/wishlist.min.js",
+      "dependencies": [
+        "core",
+        "com_solidres.no-conflict",
+        "bootstrap.popover"
+      ],
+      "version": "b1179856b0372cb8777975cb658548ac"
+    },
+    {
+      "name": "com_solidres.field-customer",
+      "type": "script",
+      "uri": "com_solidres/assets/field-customer.min.js",
+      "attributes": {
+        "type": "module"
+      },
+      "version": "2e6f6c2f3eed9b1fefbdf2207295c015a5938344"
+    },
+    {
+      "name": "com_solidres.inline-edit",
+      "type": "script",
+      "uri": "com_solidres/assets/inline-edit.min.js",
+      "version": "25e64aa754c310d45c1e084d574c1bb0"
+    },
+    {
+      "name": "com_solidres.leaflet",
+      "type": "style",
+      "uri": "com_solidres/assets/leaflet.min.css",
+      "version": "c4f1ef7b44a42831af35a8d1cd1519d7"
+    },
+    {
+      "name": "com_solidres.leaflet-search",
+      "type": "style",
+      "uri": "com_solidres/assets/leaflet-search.min.css",
+      "version": "c4f1ef7b44a42831af35a8d1cd1519d7"
+    },
+    {
+      "name": "com_solidres.leaflet",
+      "type": "script",
+      "uri": "com_solidres/assets/leaflet.min.js",
+      "version": "c4f1ef7b44a42831af35a8d1cd1519d7"
+    },
+    {
+      "name": "com_solidres.leaflet-search",
+      "type": "script",
+      "uri": "com_solidres/assets/leaflet-search.min.js",
+      "version": "c4f1ef7b44a42831af35a8d1cd1519d7"
+    },
+    {
+      "name": "com_solidres.image-uploader",
+      "type": "style",
+      "uri": "com_solidres/assets/image-uploader.min.css",
+      "version": "07c01f92f8cc36c71e58a8ad0fb8639d",
+      "dependencies": ["dragula"]
+    },
+    {
+      "name": "com_solidres.image-uploader",
+      "type": "script",
+      "uri": "com_solidres/assets/image-uploader.min.js",
+      "version": "07c01f92f8cc36c71e58a8ad0fb8639d",
+      "dependencies": ["core", "dragula"]
+    },
+    {
+      "name": "com_solidres.venobox",
+      "type": "style",
+      "uri": "com_solidres/assets/venobox.min.css",
+      "version": "2.1.8"
+    },
+    {
+      "name": "com_solidres.venobox",
+      "type": "script",
+      "uri": "com_solidres/assets/venobox.min.js",
+      "version": "2.1.8"
+    }
+  ]
+}

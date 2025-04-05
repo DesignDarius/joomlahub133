@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<falang type="contentelement">
+    <name>Solidres - Statuses</name>
+    <author>Solidres Team</author>
+    <version>3.2.2</version>
+    <description>Solidres content element file for Falang</description>
+    <copyright>Copyright (C) 2013 Solidres. All Rights Reserved.</copyright>
+    <reference type="sr_statuses">
+        <table name="sr_statuses">
+            <field type="referenceid" name="id" translate="0">ID</field>
+            <field type="titletext" name="label" length="50" maxlength="255" translate="1">Label</field>
+            <field type="htmltext" name="email_text" translate="1">Email text</field>
+        </table>
+    </reference>
+    <component>
+        <form>com_solidres#sr_statuses#id#task#!edit</form>
+    </component>
+    <translationfilters>
+        <keyword>label</keyword>
+        <sr_statuses_scope>scope</sr_statuses_scope>
+        <sr_statuses_type>type</sr_statuses_type>
+    </translationfilters>
+</falang>

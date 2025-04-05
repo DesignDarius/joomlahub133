@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="SR_CUSTOMER_DASHBOARD_VIEW_DEFAULT_TITLE" option="sr_customer_dashboard_view_default_option">
+		<help
+				key=""
+				/>
+		<message>
+			<![CDATA[SR_CUSTOMER_DASHBOARD_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+<fields name="params">
+
+</fields>
+</metadata>

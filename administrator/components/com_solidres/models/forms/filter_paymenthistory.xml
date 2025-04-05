@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+                name="search"
+                type="text"
+                label="SR_FILTER_SEARCH_TITLE"
+                description="SR_FILTER_SEARCH_DESC"
+                hint="JSEARCH_FILTER"
+        />
+        <field
+                name="payment_method_id"
+                type="PaymentMethods"
+                label="SR_FILTER_PAYMENT_METHODS"
+                onchange="this.form.submit();"
+        />
+        <field
+                name="payment_date"
+                type="calendar"
+                label="SR_FILTER_PAYMENT_DATE"
+                showtime="false"
+                format="%Y-%m-%d"
+        />
+        <field
+                name="scope"
+                type="list"
+                label="SR_FILTER_SCOPE"
+                onchange="this.form.submit();"
+        >
+            <option value="0">SR_PROPERTY</option>
+            <option value="1">SR_EXPERIENCE</option>
+        </field>
+        <field
+                name="payment_status"
+                type="statuses"
+                statusType="1"
+                label="SR_FILTER_PAYMENT_STATUS"
+                onchange="this.form.submit();"
+        >
+            <option value="">SR_STATUS_SELECT</option>
+        </field>
+    </fields>
+    <fields name="list">
+        <field
+                name="fullordering"
+                type="hidden"
+        />
+        <field
+                name="limit"
+                type="limitbox"
+                default="25"
+                label="JGLOBAL_LIST_LIMIT"
+                onchange="this.form.submit();"
+        />
+    </fields>
+</form>

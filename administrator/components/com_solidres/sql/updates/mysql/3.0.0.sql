@@ -1,0 +1,16 @@
+ALTER TABLE `#__sr_reservation_assets` DROP `xreference`;
+ALTER TABLE `#__sr_tariff_details` ADD `week_from` DATE NULL DEFAULT NULL AFTER `limit_checkin`;
+ALTER TABLE `#__sr_tariff_details` ADD `week_to` DATE NULL DEFAULT NULL AFTER `week_from`;
+ALTER TABLE `#__sr_reservations` CHANGE `customer_address1` `customer_address1` VARCHAR(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;
+ALTER TABLE `#__sr_reservations` CHANGE `customer_address2` `customer_address2` VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;
+ALTER TABLE `#__sr_reservations` CHANGE `payment_method_id` `payment_method_id` VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0';
+ALTER TABLE `#__sr_reservations` CHANGE `payment_method_txn_id` `payment_method_txn_id` VARCHAR(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;
+ALTER TABLE `#__sr_reservations` CHANGE `code` `code` VARCHAR(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;
+-- ALTER TABLE `#__sr_reservations` CHANGE `customer_phonenumber` `customer_phonenumber` VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;
+-- ALTER TABLE `#__sr_reservations` CHANGE `customer_mobilephone` `customer_mobilephone` VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;
+ALTER TABLE `#__sr_reservations` CHANGE `customer_zipcode` `customer_zipcode` VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;
+ALTER TABLE `#__sr_reservations` CHANGE `customer_title` `customer_title` VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;
+ALTER TABLE `#__sr_reservations` CHANGE `customer_vat_number` `customer_vat_number` VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;
+ALTER TABLE `#__sr_reservations` CHANGE `origin` `origin` VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;
+ALTER TABLE `#__sr_reservation_assets` ADD `images` TEXT NULL DEFAULT NULL AFTER `distance_from_city_centre`;
+ALTER TABLE `#__sr_room_types` ADD `images` TEXT NULL DEFAULT NULL AFTER `is_master`;

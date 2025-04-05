@@ -1,0 +1,1 @@
+ALTER TABLE `#__sr_tariff_details` ADD `price_extras` DECIMAL(20,6) UNSIGNED NULL AFTER `price`;

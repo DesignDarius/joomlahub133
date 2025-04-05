@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+        <field name="id" type="hidden" />
+
+        <field name="name"
+               type="text"
+               default=""
+               label="SR_CUSTOMER_GROUP_NAME_LABEL"
+               required="true"/>
+
+        <field name="state"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               label="JSTATUS"
+               default="1">
+            <option value="0">JUNPUBLISHED</option>
+            <option value="1">JPUBLISHED</option>
+        </field>
+    </fieldset>
+</form>

@@ -1,0 +1,2 @@
+ALTER TABLE `#__sr_reservation_assets` CHANGE `alternative_name` `alternative_name` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE `#__sr_reservations` CHANGE `tourist_tax_amount` `tourist_tax_amount` DECIMAL(20,6) UNSIGNED NULL DEFAULT NULL;

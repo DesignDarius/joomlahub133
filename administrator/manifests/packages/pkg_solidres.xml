@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" method="upgrade">
+    <name>Solidres Core Package</name>
+    <copyright>Copyright (C) 2013 Solidres. All Rights Reserved.</copyright>
+    <packagename>solidres</packagename>
+    <license>GNU General Public License version 3, or later</license>
+    <creationDate>Dec 2024</creationDate>
+    <version>3.2.2</version>
+    <url>https://www.solidres.com</url>
+    <packager>Solidres Team</packager>
+    <packagerurl>https://www.solidres.com</packagerurl>
+    <author>Solidres Team</author>
+    <authorEmail>contact@solidres.com</authorEmail>
+    <authorUrl>https://www.solidres.com</authorUrl>
+    <description>Solidres Core Installer Package</description>
+
+    <scriptfile>solidres.scriptfile.php</scriptfile>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Solidres Update Server">
+            https://www.solidres.com/index.php?option=com_ars&amp;view=update&amp;task=stream&amp;format=xml&amp;id=1
+        </server>
+    </updateservers>
+
+    <files>
+        <file type="library" id="lib_solidres">lib_solidres.zip</file>
+        <file type="component" id="com_solidres">com_solidres.zip</file>
+        <file type="plugin" id="plg_content_solidres" group="content">plg_content_solidres.zip</file>
+        <file type="plugin" id="plg_extension_solidres" group="extension">plg_extension_solidres.zip</file>
+        <file type="plugin" id="plg_privacy_solidres" group="privacy">plg_privacy_solidres.zip</file>
+        <file type="plugin" id="plg_system_solidres" group="system">plg_system_solidres.zip</file>
+        <file type="plugin" id="plg_solidres_simple_gallery" group="solidres">plg_solidres_simple_gallery.zip</file>
+        <file type="plugin" id="plg_solidres_api" group="solidres">plg_solidres_api.zip</file>
+        <file type="plugin" id="plg_solidres_app" group="solidres">plg_solidres_app.zip</file>
+        <file type="plugin" id="plg_solidrespayment_bankwire" group="solidrespayment">plg_solidrespayment_bankwire.zip</file>
+        <file type="plugin" id="plg_solidrespayment_paylater" group="solidrespayment">plg_solidrespayment_paylater.zip</file>
+        <file type="plugin" id="plg_user_solidres" group="user">plg_user_solidres.zip</file>
+        <file type="module" id="mod_sr_checkavailability" client="site">mod_sr_checkavailability.zip</file>
+        <file type="module" id="mod_sr_currency" client="site">mod_sr_currency.zip</file>
+        <file type="module" id="mod_sr_summary" client="site">mod_sr_summary.zip</file>
+    </files>
+</extension>

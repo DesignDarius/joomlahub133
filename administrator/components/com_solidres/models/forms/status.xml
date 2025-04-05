@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+        <field
+                name="id"
+                type="hidden"
+        />
+        <field
+                name="scope"
+                type="hidden"
+                default="0"
+        />
+        <field
+                name="readonly"
+                type="hidden"
+                default="0"
+        />
+        <field
+                name="label"
+                type="text"
+                label="SR_STATUS_LABEL"
+                required="true"
+        />
+        <field
+                name="state"
+                type="list"
+                label="JSTATUS"
+                default="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="-2">JTRASH</option>
+        </field>
+        <field
+                name="type"
+                type="list"
+                label="SR_STATUS_TYPE"
+                required="true"
+                filter="uint"
+        >
+            <option value="">SR_FILTER_TYPE_SELECT</option>
+            <option value="0">SR_TYPE_RESERVATION_STATUS</option>
+            <option value="1">SR_TYPE_PAYMENT_STATUS</option>
+        </field>
+        <field
+                name="code"
+                type="number"
+                label="SR_STATUS_CODE_LABEL"
+                required="true"
+                filter="integer"
+        />
+        <field
+                name="color_code"
+                type="color"
+                label="SR_STATUS_COLOR_CODE_LABEL"
+                required="true"
+        />
+        <field
+                name="email_text"
+                type="editor"
+                label="SR_STATUS_EMAIL_TEXT_LABEL"
+                description="SR_STATUS_EMAIL_TEXT_DESC"
+                filter="safehtml"
+        />
+    </fieldset>
+</form>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+                name="search"
+                type="text"
+                label="SR_FILTER_SEARCH"
+                description="SR_FILTER_SEARCH_DESC"
+                hint="JSEARCH_FILTER"
+                />
+        <field
+                name="customer_group_id"
+                type="customergroup"
+                onchange="this.form.submit()"
+                showall="true"
+                />
+        <field
+                name="customer_fullname"
+                type="text"
+                label="SR_FILTER_FULL_NAME_SEARCH"
+                hint="SR_FILTER_FULL_NAME_SEARCH"
+                onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }"
+                />
+        <field
+                name="customer_username"
+                type="text"
+                label="SR_FILTER_USERNAME_SEARCH"
+                hint="SR_FILTER_USERNAME_SEARCH"
+                onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }"
+                />
+        <field
+                name="customer_email"
+                type="text"
+                label="SR_FILTER_EMAIL_SEARCH"
+                hint="SR_FILTER_EMAIL_SEARCH"
+                onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }"
+                />
+
+    </fields>
+    <fields name="list">
+        <field
+                name="limit"
+                type="limitbox"
+                default="25"
+                label="SR_LIST_LIMIT"
+                description="SR_LIST_LIMIT_DESC"
+                onchange="this.form.submit();"
+                />
+    </fields>
+</form>

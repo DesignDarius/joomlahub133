@@ -1,0 +1,1 @@
+ALTER TABLE `#__sr_coupons` ADD COLUMN `quantity` INT(11) UNSIGNED NULL DEFAULT NULL AFTER `valid_to_checkin`;

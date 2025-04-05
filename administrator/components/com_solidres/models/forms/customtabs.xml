@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <field
+            name="title"
+            type="text"
+            label="SR_CUSTOM_TABS_TITLE"
+            required="true"
+    />
+    <field
+            name="content"
+            type="editor"
+            label="SR_CUSTOM_TABS_CONTENT"
+            buttons="true"
+            filter="safehtml"
+    />
+</form>

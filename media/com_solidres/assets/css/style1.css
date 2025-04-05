@@ -1,0 +1,208 @@
+/*!------------------------------------------------------------------------
+  Solidres - Hotel booking extension for Joomla
+  ------------------------------------------------------------------------
+  @Author    Solidres Team
+  @Website   https://www.solidres.com
+  @copyright Copyright (C) 2013 Solidres. All Rights Reserved.
+  @License   GNU General Public License version 3, or later
+------------------------------------------------------------------------*/
+
+/* Asset Information
+====================================================================== */
+.reservation_asset_item .rating {
+    font-size: 24px;
+}
+.reservation_asset_item .reservation_asset_subinfo {
+    display: block;
+    color: #999;
+    font-style: italic;
+}
+.reservation_asset_item .social_network {
+    margin: 5px 0 15px;
+}
+.reservation_asset_item .social_network i {
+    font-size: 20px;
+}
+
+/* Menu Tab
+====================================================================== */
+.reservation_asset_item .nav-tabs {
+    margin-top: 20px;
+}
+.reservation_asset_item .tab-content {
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: #ddd;
+    padding: 20px 20px 10px;
+    margin-bottom: 20px;
+}
+
+/* Checkavailability Form
+====================================================================== */
+#asset-checkavailability-form {
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+    background: #f9f9f9;
+}
+
+/* Wizard
+====================================================================== */
+.wizard {
+    background-color: #f9f9f9;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px 4px 0 0;
+    *zoom: 1;
+}
+.wizard ul li {
+    height: 46px;
+    padding: 0 10px 0 10px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 46px;
+    color: #999999;
+    cursor: default;
+    font-weight: bold;
+}
+.wizard ul li .chevron {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    border: 24px solid transparent;
+    border-right: 0;
+    border-left: 14px solid #d4d4d4;
+}
+.wizard ul li .chevron:before {
+    position: absolute;
+    top: -24px;
+    right: 1px;
+    display: block;
+    border: 24px solid transparent;
+    border-right: 0;
+    border-left: 14px solid #f9f9f9;
+    content: "";
+}
+.wizard ul li.complete {
+    color: green;
+}
+.wizard ul li.complete .badge {
+    background-color: green;
+}
+.wizard ul li .badge {
+    margin-right: 10px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+
+/* Step1 - Roomtypes Row
+====================================================================== */
+.reservation-single-step-holder {
+    background: #f5f5f5;
+}
+.button-row {
+    background: #f5f5f5;
+}
+.button-row.button-row-top {
+    border-bottom: 1px solid #d4d4d4
+}
+.button-row.button-row-bottom {
+    border-top: 1px solid #d4d4d4;
+}
+div.even {
+    background: #f4f6f7;
+}
+div.odd {
+    background: #eee;
+}
+.roomtype_name .label-default {
+    margin-right: 5px;
+}
+#solidres .room-form .inner {
+    margin: 10px 0;
+}
+
+/* Availability Calendar */
+div.availability-calendar table tr th {
+    border-bottom: 2px solid #fff;
+}
+div.availability-calendar table tr.row-week-day {
+    background: #ccc;
+}
+
+/* Tariff */
+.tariff-box {
+    background: #fafafa;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left: 3px solid teal;
+}
+.tariff-box.is-whole {
+    border-left: 3px solid #b94a48;
+}
+.min_tariff, .normal_tariff {
+    color: green;
+    font-size: 18px;
+}
+.sr-strikethrough {
+    color: orange;
+}
+
+/* Step2 - Confirmation
+====================================================================== */
+.confirmation .termsandconditions {
+    background-color: #fff;
+}
+#solidres .payment_method_details {
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+/* Step3 - Confirmation
+====================================================================== */
+.confirmation .termsandconditions {
+    background-color: #fff;
+}
+
+/* Responsive
+====================================================================== */
+@media (max-width: 767px) {
+    .wizard ul li .chevron {
+        display: none;
+    }
+}
+
+/* Direction: rtl
+====================================================================== */
+html[dir="rtl"] .sr-wish-list {
+    text-align: left;
+}
+html[dir="rtl"] .nav-tabs > li:nth-child(1) > a {
+    margin-right: 0;
+}
+html[dir="rtl"] .wizard ul li .badge {
+    margin-left: 8px;
+}
+html[dir="rtl"] .wizard ul li .chevron {
+    left: -14px;
+    right: inherit;
+    border-left: 0;
+    border-right: 14px solid #d4d4d4;
+}
+html[dir="rtl"] .wizard ul li .chevron:before {
+    left: 1px;
+    border-left: 0;
+    border-right: 14px solid #f9f9f9;
+}
+html[dir="rtl"] .roomtype_name .label-default {
+    margin-right: 0;
+    margin-left: 5px;
+}
+html[dir="rtl"] .tariff-box {
+    border-right: 3px solid teal;
+    border-left: 1px solid #ccc;
+}
+@media (max-width: 768px) {
+    html[dir="rtl"] .sr-wish-list {
+        text-align: right;
+    }
+}

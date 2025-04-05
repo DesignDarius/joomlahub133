@@ -1,0 +1,1 @@
+ALTER TABLE `#__sr_extras` ADD `price_includes_tax` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0' AFTER `access`;

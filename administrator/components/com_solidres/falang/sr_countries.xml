@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<falang type="contentelement">
+    <name>Solidres - Countries</name>
+    <author>Solidres Team</author>
+    <version>3.2.2</version>
+    <description>Solidres content element file for Falang</description>
+    <copyright>Copyright (C) 2013 Solidres. All Rights Reserved.</copyright>
+    <reference type="content">
+        <table name="sr_countries">
+            <field type="referenceid" name="id" translate="0">ID</field>
+            <field type="titletext" name="name" length="50" maxlength="255" translate="1">Title</field>
+        </table>
+    </reference>
+    <translationfilters>
+        <keyword>name</keyword>
+    </translationfilters>
+</falang>

@@ -1,0 +1,359 @@
+/*!------------------------------------------------------------------------
+  Solidres - Hotel booking extension for Joomla
+  ------------------------------------------------------------------------
+  @Author    Solidres Team
+  @Website   https://www.solidres.com
+  @copyright Copyright (C) 2013 Solidres. All Rights Reserved.
+  @License   GNU General Public License version 3, or later
+------------------------------------------------------------------------*/
+
+/* Asset Information
+====================================================================== */
+.asset-info {
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    text-align: center;
+}
+.asset-name h1 {
+    color: #339900;
+    margin-top: 0;
+    text-transform: uppercase;
+    border-bottom: 2px solid #dbdbdb;
+    padding-bottom: 10px;
+}
+.asset-rating {
+    color: #ffbb00;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.asset-call-action {
+    margin-bottom: 15px;
+}
+.asset-contact, .asset-social {
+    text-align: left;
+}
+.asset-contact i {
+    color: #339900;
+}
+.asset-social i {
+    font-size: 24px;
+}
+.asset-wish-list .sr-wish-list {
+    text-align: center;
+    border-bottom: 2px solid #dbdbdb;
+    margin: 10px 0 20px;
+    padding-bottom: 15px;
+}
+.asset-wish-list .sr-wish-list > a,
+.asset-wish-list .sr-wish-list > a:hover,
+.asset-wish-list .sr-wish-list > a:focus {
+    background-color: #fff;
+    border-radius: inherit;
+}
+.asset-wish-list .sr-wish-list > a {
+    border: 1px solid #dbdbdb;
+}
+
+/* Menu Tab
+====================================================================== */
+.asset-tabs .nav-tabs {
+    border-bottom: 2px solid #909090;
+}
+.asset-tabs .nav-tabs > li {
+    margin-bottom: 0;
+}
+.asset-tabs .nav-tabs > li > a {
+    border: 1px solid #dbdbdb;
+    border-radius: inherit !important;
+    margin-right: 5px;
+}
+.asset-tabs .nav-tabs > .active > a,
+.asset-tabs .nav > li > a:hover,
+.asset-tabs .nav > li > a:focus {
+    color: #fff;
+    background-color: #909090;
+    border: 1px solid #909090;
+}
+.asset-tabs .tab-content {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #dbdbdb;
+    padding: 20px 20px 10px;
+}
+
+/* Login Form - Coupon Input
+====================================================================== */
+.reservation_asset_item .sr-login-form, .coupon {
+    padding: 10px 20px;
+}
+
+/* Checkavailability Form
+====================================================================== */
+#asset-checkavailability-form h4 {
+    color: #fff;
+    background-color: #909090;
+    padding: 10px 20px;
+    margin: 0;
+}
+#asset-checkavailability-form form {
+    background-color: #dbdbdb;
+    padding: 10px 20px;
+}
+
+/* Availability Search
+====================================================================== */
+.availability-search {
+    border-bottom: 2px solid #dbdbdb;
+    margin-bottom: 20px;
+}
+.availability-search h3 {
+    color: #339900;
+    text-transform: uppercase;
+}
+.availability-search-info {
+    padding-bottom: 20px;
+}
+
+/* Wizard
+====================================================================== */
+.wizard-style {
+    background-color: #f0f1f2;
+    border: 1px solid #dbdbdb;
+    padding: 20px 20px 10px;
+}
+.wizard-style ul li {
+    color: #dbdbdb;
+    text-align: center;
+    text-transform: uppercase;
+}
+.wizard-style ul li .badge {
+    background-color: #dbdbdb;
+    border: 5px solid #fff;
+    border-radius: 100%;
+    padding: 7px 10px;
+    font-size: 15px;
+    line-height: 14px;
+}
+.wizard-style .badge:before {
+    content: "";
+    position: absolute;
+    border: 5px solid #dbdbdb;
+    left: 0;
+    right: calc(50% + 10px);
+    top: 15px;
+}
+.wizard-style .badge:after {
+    content: "";
+    position: absolute;
+    border: 5px solid #dedede;
+    left: calc(50% + 10px);
+    right: 0;
+    top: 15px;
+}
+.wizard-style .active .badge:before, .wizard-style .active .badge:after {
+    border: 5px solid #008080;
+}
+.wizard-style .complete .badge:before, .wizard-style .complete .badge:after {
+    border: 5px solid #909090;
+}
+.wizard-style ul li.complete {
+    color: #909090;
+}
+.wizard-style ul li.complete .badge {
+    background: url(../images/complete.png) no-repeat center center;
+    text-indent: -10000px;
+    background-color: #909090;
+}
+
+/* Step1 - Roomtypes Row Grid
+====================================================================== */
+.step-content {
+    margin-top: 20px;
+}
+.button-row.button-row-top, .button-row.button-row-bottom {
+    background-color: #f0f1f2;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+}
+.room_type_row {
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+}
+.room_type_details {
+    padding: 20px;
+}
+.roomtype_name {
+    border-bottom: 2px solid #dbdbdb;
+    margin-bottom: 10px;
+}
+.roomtype_name h4 {
+    margin: 0 0 5px 0;
+}
+.roomtype_name .badge {
+    float: right;
+}
+.roomtype_more_desc i {
+    color: #339900;
+}
+
+/* Carousel Slide */
+.carousel .item img {
+    width: 100%;
+}
+
+/* Availability Calendar */
+.room_type_row  > div:nth-child(2) > div {
+    min-height: 1px;
+}
+.availability-calendar {
+    background-color: #f0f1f2;
+    margin: 0 20px 20px;
+}
+div.availability-calendar table tr th {
+    border-bottom: 2px solid #008080;
+}
+div.availability-calendar table tr.row-week-day {
+    background: #fff;
+}
+.room-grid .availability-calendar .col-md-4 {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+}
+
+/* Tariff */
+.tariff-box {
+    background-color: #f0f1f2;
+    margin: 0 20px 20px;
+}
+.tariff-box.is-whole .tariff-value {
+    background-color: #b94a48;
+}
+.tariff-box.is-whole .tariff-button button {
+    float: none;
+}
+.room-grid .tariff-sep {
+    margin: 20px;
+}
+.room-grid .tariff-value {
+    background-color: #008080;
+    padding: 10px 20px;
+    color: #fff;
+    text-align: center;
+}
+.room-grid .tariff-value span {
+    display: block;
+    margin-right: 5px;
+}
+.starting_from, .tariff_suffix, .tariff_type {
+    font-size: 12px;
+    font-weight: bold;
+}
+.tariff_type {
+    font-style: italic;
+}
+.min_tariff, .normal_tariff {
+    color: #fff;
+    font-size: 24px;
+}
+.sr-strikethrough {
+    color: #ffbb00;
+}
+.tariff-title-desc {
+    text-align: center;
+    padding: 10px 20px;
+}
+.tariff-button {
+    padding: 0 20px 20px;
+    text-align: center;
+}
+.tariff-button select{
+    margin-bottom: 0;
+}
+.tariff-button .tariff_type {
+    color: #008080;
+}
+#solidres .checkinoutform .inner {
+    background-color: #fff;
+    margin: 0 20px 20px;
+    padding: 10px;
+}
+.room-grid .room_type_row .alert.alert-warning {
+    margin: 0 20px 20px;
+}
+
+/* Roomtype form */
+.room-form {
+    background-color: #fff;
+    margin: 0 20px 20px;
+}
+.breakdown, .extra_details {
+    background-color: #f0f1f2;
+    border: 1px solid #dbdbdb;
+}
+.room-grid .breakdown-row .col-md-2 {
+    width: 50%;
+    float: left;
+}
+
+/* Step2 - Guest Info
+====================================================================== */
+.guestinfo h3 {
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 5px;
+}
+#solidres .payment_method_cielo_details,
+#solidres .payment_method_details {
+    background: #f0f1f2;
+    border: 1px solid #dbdbdb;
+}
+#solidres .guestinfo .inner {
+    margin: 0;
+}
+#solidres .guestinfo .button-row .inner {
+    margin: 10px;
+}
+
+/* Step3 - Confirmation
+====================================================================== */
+.confirmation .termsandconditions {
+    background-color: #f0f1f2;
+}
+
+/* Responsive
+====================================================================== */
+@media (max-width: 767px) {
+    .asset-tabs {
+        margin-top: 20px;
+    }
+    .input-prepend input, .input-append input, .input-prepend input[class*="span"], .input-append input[class*="span"] {
+        display: inline-block;
+        width: auto;
+    }
+    .availability-search .btn-group {
+        text-align: left;
+    }
+    .room-grid .tariff-value span {
+        display: block;
+    }
+}
+
+/* Direction: rtl
+====================================================================== */
+html[dir="rtl"] .asset-contact,
+html[dir="rtl"] .asset-social {
+    text-align: right;
+}
+html[dir="rtl"] .nav-tabs > li:nth-child(1) > a {
+    margin-right: 0;
+}
+html[dir="rtl"] .roomtype_name .badge {
+    float: left;
+}
+html[dir="rtl"] .room-grid .availability-calendar .span4 {
+    margin-right: 0;
+}
+html[dir="rtl"] .room-grid .breakdown-row .col-md-2 {
+    float: right;
+}

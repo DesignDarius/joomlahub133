@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<extension type="module" client="site" version="2.5.0" method="upgrade">
+	<name>Setmore Appointments</name>
+	<author>Anand Thiyagarasu</author>
+	<authorEmail>help@setmore.com</authorEmail>
+	<authorUrl>https://www.setmore.com</authorUrl>
+	<version>1.0.0</version>
+	<license>GNU/GPLv3 https://www.gnu.org/licenses/gpl-3.0.html</license>
+	<description> 
+			<![CDATA[
+				<p>
+					To manage your Appointments, Staff and Services login to <a href="https://go.setmore.com/" alt="Setmore Appointments">Setmore</a>.
+					If you don't have a Setmore account,  it will just take 30 seconds to <a href="https://www.setmore.com/start-now" alt="Setmore Appointments">create and setup your own account</a>
+				</p>
+			]]>
+	</description>
+	<files>
+		<filename>mod_setmore.xml</filename>
+		<filename module="mod_setmore">mod_setmore.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="setmorefields" label="Setmore Configuration">
+				<field type="text" name="setmore_username" label="Enter your Setmore Key" default="37a6560e-88e8-495a-bd56-49a3854b6d3c" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

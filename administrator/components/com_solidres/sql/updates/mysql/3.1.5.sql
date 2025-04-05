@@ -1,0 +1,1 @@
+ALTER TABLE `#__sr_reservation_assets` CHANGE `country_id` `country_id` int(11) unsigned NULL AFTER `geo_state_id`;

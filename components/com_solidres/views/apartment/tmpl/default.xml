@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="SR_APARTMENT_MENU_LABEL">
+        <message>
+            <![CDATA[SR_APARTMENT_MENU_DESC]]>
+        </message>
+    </layout>
+    <fields name="request">
+        <fieldset
+                name="request"
+                addfieldpath="/administrator/components/com_solidres/models/fields">
+
+            <field
+                    name="id"
+                    type="Modal_Solidres"
+                    label="SR_APARTMENT_SELECT"
+                    required="true"
+                    edit="false"
+                    clear="false"
+                    view="roomtypes"
+            />
+        </fieldset>
+    </fields>
+</metadata>

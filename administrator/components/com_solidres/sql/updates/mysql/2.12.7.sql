@@ -1,0 +1,2 @@
+ALTER TABLE `#__sr_reservations` CHANGE `payment_method_surcharge` `payment_method_surcharge` DECIMAL(20,6) UNSIGNED NOT NULL DEFAULT 0;
+ALTER TABLE `#__sr_reservations` CHANGE `payment_method_discount` `payment_method_discount` DECIMAL(20,6) UNSIGNED NOT NULL DEFAULT 0;

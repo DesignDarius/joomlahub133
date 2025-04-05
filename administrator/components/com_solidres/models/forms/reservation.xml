@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+               readonly="true" class="readonly"/>
+
+        <field
+                name="state"
+                type="hidden"
+        />
+
+        <field
+                name="customer_id"
+                type="hidden"
+        />
+
+        <field
+                name="created_date"
+                type="hidden"
+        />
+
+        <field
+                name="modified_date"
+                type="hidden"
+        />
+
+        <field
+                name="modified_by"
+                type="hidden"
+        />
+
+        <field
+                name="created_by"
+                type="hidden"
+        />
+
+        <field
+                name="checked_out"
+                type="hidden"
+                filter="unset"
+        />
+
+        <field
+                name="checked_out_time"
+                type="hidden"
+                filter="unset"
+        />
+
+        <field
+                name="payment_method_id"
+                type="hidden"
+        />
+
+        <field
+                name="payment_method_txn_id"
+                type="hidden"
+        />
+
+        <field
+                name="payment_method_surcharge"
+                type="hidden"
+        />
+
+        <field
+                name="payment_method_discount"
+                type="hidden"
+        />
+
+        <field
+                name="payment_status"
+                type="hidden"
+        />
+
+        <field
+                name="payment_data"
+                type="hidden"
+        />
+
+        <field
+                name="code"
+                type="hidden"
+        />
+
+        <field
+                name="coupon_id"
+                type="hidden"
+        />
+
+        <field name="coupon_code" type="text" label="SR_FIELD_RESERVATION_COUPON_LABEL"/>
+
+        <field
+                name="customer_title"
+                type="hidden"
+        />
+
+        <field
+                name="customer_firstname"
+                type="hidden"
+        />
+
+        <field
+                name="customer_middlename"
+                type="hidden"
+        />
+
+        <field
+                name="customer_lastname"
+                type="hidden"
+        />
+
+        <field
+                name="customer_email"
+                type="hidden"
+        />
+
+
+        <field
+                name="customer_phonenumber"
+                type="hidden"
+        />
+
+        <field
+                name="customer_mobilephone"
+                type="hidden"
+        />
+
+
+        <field
+                name="customer_company"
+                type="hidden"
+        />
+
+        <field
+                name="customer_address1"
+                type="hidden"
+        />
+
+        <field
+                name="customer_address2"
+                type="hidden"
+        />
+
+        <field
+                name="customer_city"
+                type="hidden"
+        />
+
+        <field
+                name="customer_zipcode"
+                type="hidden"
+        />
+
+        <field
+                name="customer_country_id"
+                type="hidden"
+        />
+
+        <field
+                name="customer_geo_state_id"
+                type="hidden"
+        />
+
+        <field
+                name="customer_vat_number"
+                type="hidden"
+        />
+
+        <field
+                name="customer_ip"
+                type="hidden"
+        />
+
+        <field
+                name="customer_coordinates"
+                type="hidden"
+        />
+
+        <field
+                name="customer_language"
+                type="hidden"
+        />
+
+        <field
+                name="customer_ua"
+                type="hidden"
+        />
+
+        <field
+                name="customer_ismobile"
+                type="hidden"
+        />
+
+        <field
+                name="checkin"
+                type="hidden"
+        />
+
+        <field
+                name="checkout"
+                type="hidden"
+        />
+
+        <field
+                name="invoice_number"
+                type="hidden"
+        />
+
+        <field
+                name="currency_id"
+                type="hidden"
+        />
+
+        <field
+                name="currency_code"
+                type="hidden"
+        />
+
+        <field
+                name="total_price"
+                type="hidden"
+        />
+
+        <field
+                name="total_price_tax_incl"
+                type="hidden"
+        />
+
+        <field
+                name="total_price_tax_excl"
+                type="hidden"
+        />
+
+        <field
+                name="total_extra_price"
+                type="hidden"
+        />
+
+        <field
+                name="total_extra_price_tax_incl"
+                type="hidden"
+        />
+
+        <field
+                name="total_extra_price_tax_excl"
+                type="hidden"
+        />
+
+        <field
+                name="total_discount"
+                type="hidden"
+        />
+
+        <field
+                name="note"
+                type="hidden"
+        />
+
+        <field
+                name="reservation_asset_id"
+                type="hidden"
+        />
+
+        <field
+                name="reservation_asset_name"
+                type="hidden"
+        />
+
+        <field
+                name="deposit_amount"
+                type="hidden"
+        />
+
+        <field
+                name="total_paid"
+                type="hidden"
+        />
+
+        <field
+                name="tax_amount"
+                type="hidden"
+        />
+
+        <field
+                name="tourist_tax_amount"
+                type="hidden"
+        />
+
+        <field
+                name="total_fee"
+                type="hidden"
+        />
+
+        <field
+                name="discount_pre_tax"
+                type="hidden"
+        />
+
+        <field name="extra_id" type="extra"
+               default="" label="SR_FIELD_RESERVATION_EXTRA_LABEL"/>
+        <field
+                name="booking_details" type="hidden"
+        />
+
+
+        <field
+                name="room_type_id"
+                type="hidden"
+        />
+
+        <field
+                name="room_id"
+                type="hidden"
+        />
+
+        <field
+                name="customer_code"
+                type="hidden"
+        />
+
+        <field
+                name="customer_country_name"
+                type="hidden"
+        />
+
+        <field
+                name="customer_geostate_name"
+                type="hidden"
+        />
+
+        <field
+                name="reserved_room_details"
+                type="hidden"
+        />
+
+        <field
+                name="notes"
+                type="hidden"
+        />
+
+        <field
+                name="extras"
+                type="hidden"
+        />
+
+        <field
+                name="commissions"
+                type="hidden"
+        />
+
+        <field
+                name="commission_payout_total_paid"
+                type="hidden"
+        />
+
+        <field
+                name="booking_type"
+                type="hidden"
+        />
+
+        <field
+                name="total_single_supplement"
+                type="hidden"
+        />
+
+        <field
+                name="origin"
+                type="hidden"
+        />
+
+        <field
+                name="origin_id"
+                type="hidden"
+        />
+
+        <field
+                name="cm_id"
+                type="hidden"
+        />
+
+        <field
+                name="cm_creation_date"
+                type="hidden"
+        />
+
+        <field
+                name="cm_modification_date"
+                type="hidden"
+        />
+
+        <field
+                name="cm_channel_order_id"
+                type="hidden"
+        />
+
+        <field
+                name="cm_payment_collect"
+                type="hidden"
+        />
+
+        <field
+                name="is_approved"
+                type="hidden"
+        />
+
+        <field
+                name="checkinout_status"
+                type="hidden"
+        />
+
+        <field
+                name="checked_in_date"
+                type="hidden"
+        />
+
+        <field
+                name="checked_out_date"
+                type="hidden"
+        />
+
+        <field
+                name="reservation_meta"
+                type="hidden"
+        />
+
+        <field
+                name="confirmation_date"
+                type="hidden"
+        />
+
+        <field name="number_of_night" type="text" label="SR_FIELD_RESERVATION_NUMBER_OF_NIGHT_LABEL"/>
+    </fieldset>
+</form>

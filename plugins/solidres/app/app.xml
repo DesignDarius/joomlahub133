@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="solidres" method="upgrade">
+    <name>plg_solidres_app</name>
+    <author>Solidres Team</author>
+    <creationDate>Dec 2024</creationDate>
+    <copyright>Copyright (C) 2013 Solidres. All rights reserved.</copyright>
+    <license>GNU General Public License version 3, or later</license>
+    <authorEmail>contact@solidres.com</authorEmail>
+    <authorUrl>https://www.solidres.com</authorUrl>
+    <version>3.2.2</version>
+    <description>PLG_SOLIDRES_APP_XML_DESCRIPTION</description>
+
+    <files>
+        <filename plugin="app">app.php</filename>
+        <filename>checksums</filename>
+        <folder>field</folder>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        type="number"
+                        name="size"
+                        label="PLG_SOLIDRES_APP_CODE_SIZE"
+                        min="100"
+                        max="350"
+                        default="200"
+                />
+            </fieldset>
+        </fields>
+    </config>
+    <fields name="plugins">
+        <fieldset
+                name="app"
+                label="SR_FIELD_APP_TAB_LABEL"
+                addfieldpath="/plugins/solidres/app/field">
+            <field
+                    type="text"
+                    name="app_property_id"
+                    label="SR_FIELD_APP_PROPERTY_ID_LABEL"
+            />
+            <field
+                    type="QRCode"
+                    name="QRCode"
+                    label="PLG_SOLIDRES_APP_PROPERTY_LOGIN_QRCODE_LABEL"
+            />
+        </fieldset>
+    </fields>
+</extension>

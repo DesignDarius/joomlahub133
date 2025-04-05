@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension
+	type="module"
+	client="site"
+	method="upgrade">
+	<name>mod_sr_checkavailability</name>
+	<creationDate>Dec 2024</creationDate>
+	<author>Solidres Team</author>
+	<authorEmail>contact@solidres.com</authorEmail>
+	<authorUrl>https://www.solidres.com</authorUrl>
+	<copyright>(C) 2013 - 2020 Solidres. All right reserved</copyright>
+	<license>GNU General Public License version 3, or later</license>
+	<version>3.2.2</version>
+	<description>MOD_SR_CHECKAVAILABILITY_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sr_checkavailability">mod_sr_checkavailability.php</filename>
+		<filename>mod_sr_checkavailability.xml</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+				<field
+						name="target_itemid"
+						type="menuitem"
+						label="SR_MOD_CHECKAVAILABILITY_FIELD_TARGET_ITEMID_LABEL"
+						description="SR_MOD_CHECKAVAILABILITY_FIELD_TARGET_ITEMID_DESC" />
+				<field name="enable_room_quantity_option" type="list"
+					   description="SR_MOD_CHECKAVAILABILITY_FIELD_ENABLE_ROOM_QUANTITY_OPTION_DESC"
+					   label="SR_MOD_CHECKAVAILABILITY_FIELD_ENABLE_ROOM_QUANTITY_OPTION_LABEL"
+					   default="0"
+						>
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field
+					name="max_room_number"
+					type="text"
+					default="10"
+                    showon="enable_room_quantity_option:1"
+					label="SR_MOD_CHECKAVAILABILITY_FIELD_MAX_ROOM_NUMBER_LABEL"
+					description="SR_MOD_CHECKAVAILABILITY_FIELD_MAX_ROOM_NUMBER_DESC" />
+				
+				<field
+					name="max_adult_number"
+					type="text"
+					default="10"
+                    showon="enable_room_quantity_option:1"
+					label="SR_MOD_CHECKAVAILABILITY_FIELD_MAX_ADULT_NUMBER_LABEL"
+					description="SR_MOD_CHECKAVAILABILITY_FIELD_MAX_ADULT_NUMBER_DESC" />
+				
+				<field
+					name="max_child_number"
+					type="text"
+					default="10"
+                    showon="enable_room_quantity_option:1"
+					label="SR_MOD_CHECKAVAILABILITY_FIELD_MAX_CHILD_NUMBER_LABEL"
+					description="SR_MOD_CHECKAVAILABILITY_FIELD_MAX_CHILD_NUMBER_DESC" />
+
+                <field
+                    name="hide_room_quantity"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="0"
+                    showon="enable_room_quantity_option:1"
+                    label="SR_MOD_CHECKAVAILABILITY_HIDE_ROOM_QUANTITY_LABEL"
+                    description="SR_MOD_CHECKAVAILABILITY_HIDE_ROOM_QUANTITY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                    name="merge_adult_child"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="0"
+                    showon="hide_room_quantity:1"
+                    label="SR_MOD_CHECKAVAILABILITY_MERGE_ADULT_CHILD_LABEL"
+                    description="SR_MOD_CHECKAVAILABILITY_MERGE_ADULT_CHILD_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                    name="enable_roomtype_dropdown"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="0"
+                    label="SR_MOD_CHECKAVAILABILITY_ENABLE_ROOMTYPE_DROPDOWN_LABEL"
+                    description="SR_MOD_CHECKAVAILABILITY_ENABLE_ROOMTYPE_DROPDOWN_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                    name="allowed_checkin_days"
+                    type="list"
+                    default="[&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;]"
+                    multiple="true"
+                    label="SR_MOD_CHECKAVAILABILITY_ALLOWED_CHECKIN_DAYS_LABEL"
+                    description="SR_MOD_CHECKAVAILABILITY_ALLOWED_CHECKIN_DAYS_DESC">
+                    <option value="0">SUN</option>
+                    <option value="1">MON</option>
+                    <option value="2">TUE</option>
+                    <option value="3">WED</option>
+                    <option value="4">THU</option>
+                    <option value="5">FRI</option>
+                    <option value="6">SAT</option>
+                </field>
+
+                <field
+                    name="enable_general_availability_daterange"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="0"
+                    label="SR_MOD_CHECKAVAILABILITY_ENABLE_GENERAL_AVAILABILITY_DATERANGE_LABEL"
+                    description="SR_MOD_CHECKAVAILABILITY_ENABLE_GENERAL_AVAILABILITY_DATERANGE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                    name="available_from"
+                    showon="enable_general_availability_daterange:1"
+                    type="calendar"
+                    label="SR_MOD_CHECKAVAILABILITY_AVAILABLE_FROM_LABEL"
+                    size="22"
+                    translateformat="true"
+                    showtime="false"
+                />
+
+                <field
+                    name="available_to"
+                    showon="enable_general_availability_daterange:1"
+                    type="calendar"
+                    label="SR_MOD_CHECKAVAILABILITY_AVAILABLE_TO_LABEL"
+                    size="22"
+                    translateformat="true"
+                    showtime="false"
+                />
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+					class="form-select"
+					validate="moduleLayout"/>
+
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea"
+					rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					validate="CssIdentifier"/>
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>

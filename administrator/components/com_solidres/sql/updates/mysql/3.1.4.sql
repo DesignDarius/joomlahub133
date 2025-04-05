@@ -1,0 +1,1 @@
+ALTER TABLE `#__sr_tariff_details` CHANGE `price` `price` decimal(20,6) NULL AFTER `tariff_id`;

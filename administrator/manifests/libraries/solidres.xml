@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="library" method="upgrade">
+	<name>lib_solidres</name>
+	<libraryname>solidres</libraryname>
+	<description>Solidres library</description>
+	<creationDate>Dec 2024</creationDate>
+	<author>Solidres Team</author>
+	<authorEmail>contact@solidres.com</authorEmail>
+	<authorUrl>https://www.solidres.com</authorUrl>
+    <copyright>Copyright (C) 2013 Solidres. All Rights Reserved.</copyright>
+	<license>GNU General Public License version 3, or later</license>
+	<version>3.2.2</version>
+	<packager>Solidres Team</packager>
+	<packagerurl>https://www.solidres.com</packagerurl>
+	<files folder="solidres">
+		<file>defines.php</file>
+		<file>version.php</file>
+		<file>factory.php</file>
+        <folder>config</folder>
+		<folder>controller</folder>
+        <folder>coupon</folder>
+        <folder>currency</folder>
+		<folder>extra</folder>
+        <folder>html</folder>
+		<folder>model</folder>
+        <folder>omnipay</folder>
+		<folder>pagination</folder>
+        <folder>payment</folder>
+		<folder>plugin</folder>
+        <folder>reservation</folder>
+		<folder>roomtype</folder>
+        <folder>src</folder>
+        <folder>toolbar</folder>
+        <folder>utilities</folder>
+		<folder>view</folder>
+	</files>
+</extension>

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<falang type="contentelement">
+    <name>Solidres - Currencies</name>
+    <author>Solidres Team</author>
+    <version>3.2.2</version>
+    <description>Solidres content element file for Falang</description>
+    <copyright>Copyright (C) 2013 Solidres. All Rights Reserved.</copyright>
+    <reference type="content">
+        <table name="sr_currencies">
+            <field type="referenceid" name="id" translate="0">ID</field>
+            <field type="titletext" name="currency_name"  length="50" maxlength="255" translate="1">Name</field>
+			<!--<field type="text" name="currency_code"  length="50" maxlength="255" translate="1">Code</field>-->
+			<field type="text" name="sign"  length="50" maxlength="255" translate="1">Sign</field>
+        </table>
+    </reference>
+    <translationfilters>
+		<keyword>currency_name</keyword>
+    </translationfilters>
+</falang>

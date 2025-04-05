@@ -1,0 +1,1 @@
+ALTER TABLE `#__sr_reservation_assets` ADD `tab_content` text NULL;

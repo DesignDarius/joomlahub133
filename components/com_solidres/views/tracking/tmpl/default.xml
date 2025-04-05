@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="SR_TRACKING_VIEW_DEFAULT_TITLE">
+        <message>
+            <![CDATA[SR_TRACKING_VIEW_DEFAULT_DESC]]>
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset
+                name="display"
+                label="SR_FRONTEND_SETTING"
+        >
+            <field
+                    name="show_tracking_form"
+                    type="radio"
+                    label="SR_SHOW_TRACKING_FORM_LABEL"
+                    description="SR_SHOW_TRACKING_FORM_DESC"
+                    default="1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

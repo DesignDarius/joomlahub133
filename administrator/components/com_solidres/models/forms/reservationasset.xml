@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <config>
+        <inlinehelp button="show"/>
+    </config>
+    <fieldset>
+        <field name="id" type="hidden" default="0"/>
+
+        <field name="name" type="text"
+               default="" label="SR_FIELD_NAME_LABEL"
+               description="SR_FIELD_NAME_DESC" required="true"/>
+
+        <field name="alternative_name" type="text"
+               default="" label="SR_FIELD_ALTERNATIVE_NAME_LABEL"
+               description="SR_FIELD_ALTERNATIVE_NAME_DESC" required="false"/>
+
+        <field name="category_id"
+               type="categoryedit"
+               addfieldpath="/administrator/components/com_categories/models/fields"
+               addfieldprefix="Joomla\Component\Categories\Administrator\Field"
+               extension="com_solidres"
+               label="JCATEGORY"
+               description="SR_FIELD_CATEGORY_DESC" required="true"
+        >
+            <option value="0">SR_CREATE_NEW_CATEGORY</option>
+        </field>
+
+        <field
+                name="tags"
+                type="tag"
+                label="JTAG"
+                description="SR_TAG_DESC"
+                multiple="true"
+        />
+
+        <field name="category_name" type="text" label="SR_CATEGORY_NAME" showon="category_id:0"/>
+
+        <field name="partner_id" type="Customer"
+               addfieldpath="/administrator/components/com_solidres/models/fields"
+               default="" label="SR_FIELD_PARTNER_LABEL"
+               description="SR_FIELD_PARTNER_DESC"/>
+
+        <field name="geo_state_id" type="geostate" class="state_select" label="SR_FIELD_GEO_STATE_LABEL"
+               description="SR_FIELD_GEO_STATE_DESC"
+        />
+
+        <field name="map" type="Solidres_Map" hideLabel="true" latFieldId="jform_lat" lngFieldId="jform_lng"/>
+
+        <field name="lat" type="text" label="SR_FIELD_LAT_LABEL"
+               description="SR_FIELD_LAT_DESC"/>
+
+        <field name="lng" type="text" label="SR_FIELD_LNG_LABEL"
+               description="SR_FIELD_LNG_DESC"/>
+
+        <field name="alias" type="text"
+               default="" label="JALIAS"
+               description="SR_FIELD_ALIAS_DESC"/>
+
+        <field name="address_1" type="text" class="geocoding"
+               default="" label="SR_ADDRESS_1"
+               description="SR_FIELD_ADDRESS_1_DESC"/>
+
+        <field name="address_2" type="text" class="geocoding"
+               default="" label="SR_FIELD_ADDRESS_2_LABEL"
+               description="SR_FIELD_ADDRESS_2_DESC"/>
+
+        <field name="city" type="text" class="geocoding"
+               default="" label="SR_CITY"
+               description="SR_FIELD_CITY_DESC"/>
+
+        <field name="postcode" type="text" class="geocoding"
+               default="" label="SR_FIELD_POSTCODE_LABEL"
+               description="SR_FIELD_POSTCODE_DESC"/>
+
+        <field name="email"
+               type="text"
+               default=""
+               label="JGLOBAL_EMAIL"
+               filter="string"
+               validate="email"
+               required="true"/>
+
+        <field name="website" type="text" validate="url"
+               default="" label="SR_FIELD_WEBSITE_LABEL"
+               description="SR_FIELD_WEBSITE_DESC"/>
+
+        <field name="phone" type="text"
+               default="" label="SR_FIELD_PHONE_LABEL"/>
+
+        <field name="fax" type="text"
+               default="" label="SR_FIELD_FAX_LABEL"/>
+
+        <field name="hits" type="text"
+               default="" label="SR_FIELD_HITS_LABEL"
+               description="SR_FIELD_HITS_LABEL" readonly="true" filter="unset"/>
+
+        <field name="rating" type="rating" label="SR_FIELD_RATING_LABEL"
+               description="SR_FIELD_RATING_DESC"
+               filter="intval" default="1">
+            <option value="0">SR_STAR_UNRATED</option>
+            <option value="1">SR_STAR_1</option>
+            <option value="2">SR_STAR_2</option>
+            <option value="3">SR_STAR_3</option>
+            <option value="4">SR_STAR_4</option>
+            <option value="5">SR_STAR_5</option>
+        </field>
+
+        <field
+                name="distance_from_city_centre"
+                type="text"
+                label="SR_FIELD_DISTANCE_FROM_CITY_CENTRE_LABEL"
+                description="SR_FIELD_DISTANCE_FROM_CITY_CENTRE_DESC"
+                default="0"
+                filter="float"/>
+
+        <field name="description" type="editor"
+               label="JGLOBAL_DESCRIPTION"
+               filter="safehtml" buttons="true"/>
+
+        <field name="country_id" type="country" label="SR_FIELD_COUNTRY_LABEL"
+               description="SR_FIELD_COUNTRY_DESC" class="country_select"
+               default="0" required="true" multiple="false"/>
+
+        <field name="currency_id" type="currency" label="SR_FIELD_CURRENCY_LABEL"
+               description="SR_FIELD_CURRENCY_DESC"  filter="integer"
+               default="0" required="true"/>
+
+        <field name="state" type="list"
+               label="JSTATUS"
+               default="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="-2">JTRASH</option>
+        </field>
+
+        <field
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                name="approved"
+                label="SR_FIELD_APPROVED_LABEL"
+                description="SR_FIELD_APPROVED_DESC"
+                default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="default"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               default="0"
+               label="SR_FIELD_DEFAULT_LABEL"
+               required="true"
+               description="SR_FIELD_DEFAULT_DESC"
+               >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="mediaId"
+                type="hidden"
+        />
+
+        <field
+                name="roomTypeId"
+                type="hidden"
+        />
+
+        <field
+                name="deleteMediaId"
+                type="hidden"
+        />
+
+        <field
+                name="partner_id"
+                type="hidden"
+                filter="integer"
+        />
+
+        <field
+                name="extras"
+                type="hidden"
+        />
+
+        <field
+                name="roomTypes"
+                type="hidden"
+        />
+
+        <field
+                name="media"
+                type="hidden"
+        />
+
+        <field name="created_date" type="calendar"
+               label="JGLOBAL_FIELD_Created_Label"
+               format="%Y-%m-%d %H:%M:%S"
+               filter="server_utc"/>
+
+        <field name="created_by" type="user"
+               label="JGLOBAL_FIELD_Created_by_Label"/>
+
+        <field name="modified_date" type="text" class="readonly"
+               label="JGLOBAL_FIELD_MODIFIED_LABEL"
+               readonly="true" filter="unset"/>
+
+        <field name="modified_by" type="hidden" filter="unset"/>
+
+        <field name="checked_out" type="hidden" filter="unset"/>
+
+        <field name="checked_out_time" type="hidden" filter="unset"/>
+
+        <field name="asset_id" type="hidden" filter="unset"/>
+
+        <field name="metatitle" type="textarea"
+               label="SR_METATITLE_LABEL" description="SR_METATITLE_DESC"
+               rows="3" cols="30"/>
+
+        <field name="metakey" type="textarea"
+               label="JField_Meta_Keywords_Label" description="JField_Meta_Keywords_Desc"
+               rows="3" cols="30"/>
+
+        <field name="metadesc" type="textarea"
+               label="JField_Meta_Description_Label" description="JField_Meta_Description_Desc"
+               rows="3" cols="30"/>
+
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL"
+               />
+
+        <field
+                name="spacer1"
+                type="spacer"
+                hr="true"
+        />
+
+        <field id="deposit_required"
+               name="deposit_required"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               default="0"
+               label="SR_DEPOSIT_REQUIRED"
+               description="SR_DEPOSIT_REQUIRED_DESC"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field id="deposit_is_percentage"
+               name="deposit_is_percentage"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               default="1"
+               label="SR_DEPOSIT_IS_PERCENTAGE"
+               description="SR_DEPOSIT_IS_PERCENTAGE_DESC"
+               showon="deposit_required:1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="deposit_amount"
+               type="text"
+               default=""
+               label="SR_DEPOSIT_AMOUNT"
+               description="SR_DEPOSIT_AMOUNT_DESC"
+               showon="deposit_required:1"
+        />
+
+        <field name="deposit_by_stay_length"
+               type="text"
+               default="0"
+               label="SR_DEPOSIT_BY_STAY_LENGTH_LABEL"
+               description="SR_DEPOSIT_BY_STAY_LENGTH_DESC"
+               showon="deposit_required:1"
+        />
+
+        <field name="deposit_include_extra_cost"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               default="0"
+               label="SR_DEPOSIT_INCLUDE_EXTRA_COST_LABEL"
+               description="SR_DEPOSIT_INCLUDE_EXTRA_COST_DESC"
+               showon="deposit_required:1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="spacer2"
+                type="spacer"
+                hr="true"
+        />
+
+        <field name="facility_id" type="checkboxfacility" label="SR_FIELD_RESERVATION_ASSET_FACILITY_LABEL"
+               description="SR_FIELD_RESERVATION_ASSET_FACILITY_DESC"/>
+
+        <field name="theme_id" type="checkboxtheme" label="SR_FIELD_RESERVATION_ASSET_THEME_LABEL"
+               description="SR_FIELD_RESERVATION_ASSET_THEME_DESC"/>
+
+        <field name="commission_rate_id" type="commissionrate" />
+
+        <field name="tax_id" type="tax" label="SR_TAX_FIELD_TAX_ASSET_LABEL"
+               description="SR_TAX_FIELD_TAX_ASSET_DESC" class="tax_select"
+               filter="integer"/>
+
+        <field name="booking_type" type="list"
+               label="SR_FIELD_BOOKING_TYPE_LABEL" description="SR_FIELD_BOOKING_TYPE_DESC"
+                default="0"
+        >
+            <option value="0">BOOKING_TYPE_PER_NIGHT</option>
+            <option value="1">BOOKING_TYPE_PER_DAY</option>
+        </field>
+
+        <field name="price_includes_tax"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               default="0"
+               label="SR_FIELD_PRICE_INCLUDE_TAX_LABEL" description="SR_FIELD_PRICE_INCLUDE_TAX_DESC"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+    </fieldset>
+
+    <fields name="params">
+        <fieldset name="display" label="" addfieldpath="/administrator/components/com_solidres/models/fields">
+
+            <field name="child_max_age_limit"
+                   type="integer"
+                   first="1"
+                   last="17"
+                   step="1"
+                   default=""
+                   label="SR_FIELD_CHILD_MAX_AGE_LIMIT_LABEL"
+                   description="SR_FIELD_CHILD_MAX_AGE_LIMIT_DESC_2">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+            </field>
+
+            <field name="is_apartment"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="0"
+                   label="SR_IS_APARTMENT_LABEL"
+                   description="SR_IS_APARTMENT_DESC"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field
+                    name="room_number"
+                    type="text"
+                    default=""
+                    label="SR_FIELD_APARTMENT_ROOM_NUM_LABEL"
+                    description="SR_FIELD_APARTMENT_ROOM_NUM_DESC"
+                    showon="is_apartment:1"/>
+
+            <field id="only_show_reservation_form"
+                   name="only_show_reservation_form"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="0"
+                   label="SR_ONLY_SHOW_RESERVATION_FORM_LABEL"
+                   description="SR_ONLY_SHOW_RESERVATION_FORM_DESC"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field id="enable_coupon"
+                   name="enable_coupon"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="1"
+                   label="SR_ENABLE_COUPON_LABEL"
+                   description="SR_ENABLE_COUPON_DESC"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field name="logo"
+                   type="Solidres_Media"
+                   mediaType="PROPERTY"
+                   default=""
+                   label="SR_ASSET_LOGO_LABEL"
+                   description="SR_ASSET_LOGO_DESC"
+            />
+
+            <field id="show_facilities"
+                   name="show_facilities"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="1"
+                   label="SR_SHOW_FACILITIES_LABEL"
+                   description="SR_SHOW_FACILITIES_DESC"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field id="show_policies"
+                   name="show_policies"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="1" label="SR_SHOW_POLICIES_LABEL"
+                   description="SR_SHOW_POLICIES_DESC"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field id="show_inline_checkavailability_form"
+                   name="show_inline_checkavailability_form"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   default="0"
+                   label="SR_SHOW_INLINE_CHECKAVAILABILITY_FORM_LABEL"
+                   description="SR_SHOW_INLINE_CHECKAVAILABILITY_FORM_DESC"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field name="enable_room_quantity_option"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   description="SR_FIELD_ENABLE_ROOM_QUANTITY_OPTION_DESC"
+                   label="SR_FIELD_ENABLE_ROOM_QUANTITY_OPTION_LABEL"
+                   default="0"
+                   showon="show_inline_checkavailability_form:1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field
+                    name="max_room_number"
+                    type="text"
+                    default="10"
+                    label="SR_FIELD_MAX_ROOM_NUMBER_LABEL"
+                    description="SR_FIELD_MAX_ROOM_NUMBER_DESC"
+                    showon="enable_room_quantity_option:1[AND]show_inline_checkavailability_form:1"/>
+
+            <field
+                    name="max_adult_number"
+                    type="text"
+                    default="10"
+                    label="SR_FIELD_MAX_ADULT_NUMBER_LABEL"
+                    description="SR_FIELD_MAX_ADULT_NUMBER_DESC"
+                    showon="enable_room_quantity_option:1[AND]show_inline_checkavailability_form:1"/>
+
+            <field
+                    name="max_child_number"
+                    type="text"
+                    default="10"
+                    label="SR_FIELD_MAX_CHILD_NUMBER_LABEL"
+                    description="SR_FIELD_MAX_CHILD_NUMBER_DESC"
+                    showon="enable_room_quantity_option:1[AND]show_inline_checkavailability_form:1"/>
+
+            <field
+                    name="hide_room_quantity"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="0"
+                    showon="enable_room_quantity_option:1[AND]show_inline_checkavailability_form:1"
+                    label="SR_FIELD_HIDE_ROOM_QUANTITY_LABEL"
+                    description="SR_FIELD_HIDE_ROOM_QUANTITY_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    name="merge_adult_child"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="0"
+                    showon="hide_room_quantity:1[AND]enable_room_quantity_option:1[AND]show_inline_checkavailability_form:1"
+                    label="SR_FIELD_MERGE_ADULT_CHILD_LABEL"
+                    description="SR_FIELD_MERGE_ADULT_CHILD_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field name="show_unavailable_roomtype"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   description="SR_FIELD_SHOW_UNAVAILABLE_ROOMTYPE_DESC"
+                   label="SR_FIELD_SHOW_UNAVAILABLE_ROOMTYPE_LABEL"
+                   default="1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    name="additional_notification_emails"
+                    type="text"
+                    default=""
+                    label="SR_FIELD_ADDITIONAL_NOTIFICATION_EMAILS_LABEL"
+                    description="SR_FIELD_ADDITIONAL_NOTIFICATION_EMAILS_DESC"
+                    hint="SR_FIELD_ADDITIONAL_NOTIFICATION_EMAILS_PLACEHOLDER"
+            />
+
+            <field name="require_user_login"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   description="SR_FIELD_REQUIRE_USER_LOGIN_DESC"
+                   label="SR_FIELD_REQUIRE_USER_LOGIN_LABEL"
+                   default="0"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field name="disable_customer_registration"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   description="SR_FIELD_DISABLE_CUSTOMER_REGISTRATION_DESC"
+                   label="SR_FIELD_DISABLE_CUSTOMER_REGISTRATION_LABEL"
+                   default="1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field name="force_customer_registration"
+                   type="radio"
+                   layout="joomla.form.field.radio.switcher"
+                   description="SR_FIELD_FORCE_CUSTOMER_REGISTRATION_DESC"
+                   label="SR_FIELD_FORCE_CUSTOMER_REGISTRATION_LABEL"
+                   default="1"
+                   showon="disable_customer_registration:0"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field name="show_tariff_in_email" type="list"
+                   description="SR_FIELD_SHOW_TARIFF_IN_EMAIL_DESC"
+                   label="SR_FIELD_SHOW_TARIFF_IN_EMAIL_LABEL"
+                   default="0"
+            >
+                <option value="0">SR_FIELD_SHOW_TARIFF_IN_EMAIL_NONE</option>
+                <option value="1">SR_FIELD_SHOW_TARIFF_IN_EMAIL_TITLE</option>
+                <option value="2">SR_FIELD_SHOW_TARIFF_IN_EMAIL_DESCRIPTION</option>
+                <option value="3">SR_FIELD_SHOW_TARIFF_IN_EMAIL_BOTH</option>
+            </field>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field
+                    name="disable_online_booking"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="SR_FIELD_DISABLE_ONLINE_BOOKING_LABEL"
+                    description="SR_FIELD_DISABLE_ONLINE_BOOKING_DESC"
+                    default="0">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    name="show_tariffs"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="SR_FIELD_SHOW_TARIFFS_LABEL"
+                    description="SR_FIELD_SHOW_TARIFFS_DESC"
+                    showon="disable_online_booking:1"
+                    default="0">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    name="show_inquiry_form"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="SR_FIELD_SHOW_INQUIRY_LABEL"
+                    description="SR_FIELD_SHOW_INQUIRY_DESC"
+                    default="0">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    name="inquiry_form_scope"
+                    type="list"
+                    label="SR_FIELD_INQUIRY_FORM_SCOPE_LABEL"
+                    description="SR_FIELD_INQUIRY_FORM_SCOPE_DESC"
+                    default="0"
+                    filter="intval"
+                    showon="show_inquiry_form:1"
+            >
+                <option value="0">SR_PROPERTY</option>
+                <option value="1">SR_ROOMTYPE</option>
+            </field>
+
+            <field
+                    name="use_captcha"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="SR_FIELD_USE_CAPTCHA_LABEL"
+                    description="SR_FIELD_USE_CAPTCHA_DESC"
+                    showon="show_inquiry_form:1"
+                    default="0">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field
+                    name="show_room_tax_confirmation"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="SR_FIELD_SHOW_ROOM_TAX_CONFIRMATION_LABEL"
+                    description="SR_FIELD_SHOW_ROOM_TAX_CONFIRMATION_DESC"
+                    default="1">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field
+                    name="booking_require_approval"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="SR_FIELD_BOOKING_REQUIRE_APPROVAL_LABEL"
+                    description="SR_FIELD_BOOKING_REQUIRE_APPROVAL_DESC"
+                    default="0">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field
+                    name="use_company_info"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="SR_FIELD_USE_COMPANY_INFO_LABEL"
+                    description="SR_FIELD_USE_COMPANY_INFO_DESC"
+                    default="0">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    name="company_name"
+                    type="text"
+                    default=""
+                    label="SR_FIELD_COMPANY_NAME_LABEL"
+                    description="SR_FIELD_COMPANY_NAME_DESC"
+                    showon="use_company_info:1"
+            />
+
+            <field
+                    name="company_vat_number"
+                    type="text"
+                    default=""
+                    label="SR_FIELD_COMPANY_VAT_LABEL"
+                    description="SR_FIELD_COMPANY_VAT_DESC"
+                    showon="use_company_info:1"
+            />
+
+            <field
+                    name="company_address"
+                    type="text"
+                    default=""
+                    label="SR_FIELD_COMPANY_ADDRESS_LABEL"
+                    description="SR_FIELD_COMPANY_ADDRESS_DESC"
+                    showon="use_company_info:1"
+            />
+
+            <field
+                    name="company_phone"
+                    type="text"
+                    default=""
+                    label="SR_FIELD_COMPANY_PHONE_LABEL"
+                    description="SR_FIELD_COMPANY_PHONE_DESC"
+                    showon="use_company_info:1"
+            />
+
+            <field
+                    name="company_fax"
+                    type="text"
+                    default=""
+                    label="SR_FIELD_COMPANY_FAX_LABEL"
+                    description="SR_FIELD_COMPANY_FAX_DESC"
+                    showon="use_company_info:1"
+            />
+
+            <field
+                    name="company_email"
+                    type="text"
+                    default=""
+                    label="SR_FIELD_COMPANY_EMAIL_LABEL"
+                    description="SR_FIELD_COMPANY_EMAIL_DESC"
+                    showon="use_company_info:1"
+            />
+
+            <field
+                    name="company_website"
+                    type="text"
+                    default=""
+                    label="SR_FIELD_COMPANY_WEBSITE_LABEL"
+                    description="SR_FIELD_COMPANY_WEBSITE_DESC"
+                    showon="use_company_info:1"
+            />
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field
+                    name="enable_tourist_tax"
+                    class="btn-group"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="SR_FIELD_ENABLE_TOURIST_TAX_LABEL"
+                    default="0">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    name="tourist_tax_charge_type"
+                    type="list"
+                    label="SR_FIELD_TOURIST_TAX_CHARGE_TYPE_LABEL"
+                    description="SR_FIELD_TOURIST_TAX_CHARGE_TYPE_DESC"
+                    default="0"
+                    showon="enable_tourist_tax:1"
+            >
+                <option value="0">SR_TOURIST_TAX_CHARGE_TYPE_PER_PERSON_PER_ROOM</option>
+                <option value="1">SR_TOURIST_TAX_CHARGE_TYPE_PER_BOOKING</option>
+                <option value="2">SR_TOURIST_TAX_CHARGE_TYPE_PER_PERSON_PER_STAY</option>
+            </field>
+
+            <field
+                    name="tourist_tax_is_percent"
+                    class="btn-group"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="SR_FIELD_TOURIST_TAX_IS_PERCENT_LABEL"
+                    description="SR_FIELD_TOURIST_TAX_IS_PERCENT_DESC"
+                    default="0"
+                    showon="enable_tourist_tax:1">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    name="tourist_tax_rate"
+                    type="text"
+                    label="SR_FIELD_TOURIST_TAX_RATE_LABEL"
+                    description="SR_FIELD_TOURIST_TAX_RATE_DESC"
+                    showon="enable_tourist_tax:1"/>
+
+            <field
+                    name="tourist_tax_cap"
+                    type="text"
+                    default="0"
+                    label="SR_FIELD_TOURIST_TAX_CAP_LABEL"
+                    description="SR_FIELD_TOURIST_TAX_CAP_DESC"
+                    showon="enable_tourist_tax:1[AND]tourist_tax_is_percent:1[AND]tourist_tax_charge_type:0"/>
+
+            <field
+                    name="tourist_tax_adult_rate"
+                    type="text"
+                    label="SR_FIELD_TOURIST_TAX_ADULT_RATE_LABEL"
+                    description="SR_FIELD_TOURIST_TAX_ADULT_RATE_DESC"
+                    showon="enable_tourist_tax:1[AND]tourist_tax_charge_type:0[AND]tourist_tax_is_percent:0"/>
+
+            <field
+                    name="tourist_tax_child_rate"
+                    type="text"
+                    label="SR_FIELD_TOURIST_TAX_CHILD_RATE_LABEL"
+                    description="SR_FIELD_TOURIST_TAX_CHILD_RATE_DESC"
+                    showon="enable_tourist_tax:1[AND]tourist_tax_charge_type:0[AND]tourist_tax_is_percent:0"/>
+
+            <field
+                    name="tourist_tax_child_age_threshold"
+                    type="text"
+                    label="SR_FIELD_TOURIST_TAX_CHILD_AGE_THRESHOLD_LABEL"
+                    description="SR_FIELD_TOURIST_TAX_CHILD_AGE_THRESHOLD_DESC"
+                    default="10"
+                    showon="enable_tourist_tax:1[AND]tourist_tax_charge_type:0"/>
+
+            <field
+                    name="tourist_tax_max_applied_days"
+                    type="text"
+                    label="SR_FIELD_TOURIST_TAX_MAX_APPLIED_DAY_LABEL"
+                    description="SR_FIELD_TOURIST_TAX_MAX_APPLIED_DAY_DESC"
+                    default="0"
+                    showon="enable_tourist_tax:1[AND]tourist_tax_charge_type:0"/>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field
+                    name="enable_captcha"
+                    type="list"
+                    label="SR_FIELD_USE_CAPTCHA_LABEL"
+                    description="SR_FIELD_USE_CAPTCHA_CONFIRMATION_FORM_DESC"
+                    default="0">
+                <option value="0">JNO</option>
+                <option value="recaptcha">SR_RECAPTCHA_DEFAULT</option>
+                <option value="recaptcha_invisible">SR_RECAPTCHA_INVISIBLE</option>
+            </field>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field
+                    name="invoice_note"
+                    type="textarea"
+                    label="SR_FIELD_INVOICE_NOTE_LABEL"
+                    description="SR_FIELD_INVOICE_NOTE_DESC"
+                    default=""
+                    filter="raw"
+            />
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field
+                    name="enable_reservation_amending"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    label="SR_ENABLE_RESERVATION_AMENDING_LABEL"
+                    description="SR_ENABLE_RESERVATION_AMENDING_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    name="can_amend_dates"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    label="SR_CAN_AMEND_DATES_LABEL"
+                    description="SR_CAN_AMEND_DATES_DESC"
+                    showon="enable_reservation_amending:1"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    type="text"
+                    name="amend_threshold"
+                    label="SR_AMEND_THRESHOLD_LABEL"
+                    description="SR_AMEND_THRESHOLD_DESC"
+                    showon="enable_reservation_amending:1"
+                    defeault="15"
+            />
+
+            <field
+                    name="enable_reservation_cancel"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    label="SR_ENABLE_RESERVATION_CANCEL_LABEL"
+                    description="SR_ENABLE_RESERVATION_CANCEL_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                    type="text"
+                    name="cancel_threshold"
+                    label="SR_CANCEL_THRESHOLD_LABEL"
+                    description="SR_CANCEL_THRESHOLD_DESC"
+                    showon="enable_reservation_cancel:1"
+                    defeault="15"
+            />
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field
+                    name="general_booking_fee"
+                    type="text"
+                    default="0"
+                    label="SR_GENERAL_BOOKING_FEE_LABEL"
+                    description="SR_GENERAL_BOOKING_FEE_DESC"/>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field
+                    name="commission_balance_due_date"
+                    type="text"
+                    default="0"
+                    label="SR_COMMISSION_BALANCE_DUE_DATE_LABEL"
+                    description="SR_COMMISSION_BALANCE_DUE_DATE_DESC"/>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field name="rounding_precision" type="list" label="SR_FIELD_ROUNDING_PRECISION"
+                   description="SR_FIELD_ROUNDING_PRECISION_DESC"
+                   default="0">
+                <option value="0">SR_FIELD_ROUNDING_PRECISION_DEFAULT</option>
+                <option value="-1">SR_FIELD_ROUNDING_PRECISION_NEAREST_TEN</option>
+                <option value="-2">SR_FIELD_ROUNDING_PRECISION_NEAREST_HUNDRED</option>
+            </field>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field
+                    name="static_min_price"
+                    type="text"
+                    default="0"
+                    label="SR_STATIC_MIN_PRICE_LABEL"
+                    description="SR_STATIC_MIN_PRICE_DESC"/>
+
+            <field
+                    name="static_max_price"
+                    type="text"
+                    default="0"
+                    label="SR_STATIC_MAX_PRICE_LABEL"
+                    description="SR_STATIC_MAX_PRICE_DESC"/>
+
+            <field
+                    type="spacer"
+                    hr="true"
+            />
+
+            <field
+                    name="email_attachments"
+                    type="subform"
+                    label="SR_EMAIL_ATTACHMENTS_LABEL"
+                    description="SR_EMAIL_ATTACHMENTS_DESC"
+                    multiple="true"
+                    formsource="/administrator/components/com_solidres/models/forms/email_attachments.xml"
+            />
+
+        </fieldset>
+
+        <fieldset name="embed_form">
+            <field
+                    name="em_form_target"
+                    type="list"
+                    label="SR_EMBED_TARGET"
+                    default="_parent">
+                <option value="_parent">SR_EMBED_TARGET_PARENT</option>
+                <option value="_blank">SR_EMBED_TARGET_NEW_WIN</option>
+            </field>
+            <field
+                    name="em_bg"
+                    type="color"
+                    label="SR_EMBED_FORM_BACKGROUND"/>
+            <field
+                    name="em_color"
+                    type="color"
+                    label="SR_EMBED_FORM_FONT_COLOR"/>
+            <field
+                    name="em_input_bg"
+                    type="color"
+                    label="SR_EMBED_FORM_INPUT_BACKGROUND"/>
+            <field
+                    name="em_button_bg"
+                    type="color"
+                    label="SR_EMBED_FORM_BUTTON_BACKGROUND"
+                    default="#dddddd"/>
+            <field
+                    name="em_button_color"
+                    type="color"
+                    label="SR_EMBED_FORM_BUTTON_COLOR"
+                    default="#888888"/>
+            <field
+                    name="em_room_options"
+                    type="list"
+                    label="SR_EMBED_FORM_ROOM_OPTIONS"
+                    default="1">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field
+                    name="em_max_rooms"
+                    type="number"
+                    min="1"
+                    default="10"
+                    showon="em_room_options:1"
+                    label="SR_EMBED_MAX_ROOMS_NUMBER"/>
+
+            <field
+                    name="em_max_adults"
+                    type="number"
+                    min="1"
+                    default="10"
+                    showon="em_room_options:1"
+                    label="SR_EMBED_MAX_ADULTS_NUMBER"/>
+
+            <field
+                    name="em_max_children"
+                    type="number"
+                    min="1"
+                    default="10"
+                    showon="em_room_options:1"
+                    label="SR_EMBED_MAX_CHILDREN_NUMBER"/>
+        </fieldset>
+
+    </fields>
+
+    <fields name="metadata">
+        <fieldset name="jmetadata" label="JGLOBAL_FIELDSET_METADATA">
+            <field name="robots" type="list"
+                   label="JField_Metadata_Robots_Label" description="JField_Metadata_Robots_Desc"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JGLOBAL_INDEX_FOLLOW</option>
+                <option value="1">JGLOBAL_NOINDEX_FOLLOW</option>
+                <option value="2">JGLOBAL_INDEX_NOFOLLOW</option>
+                <option value="3">JGLOBAL_NOINDEX_NOFOLLOW</option>
+                <option value="4">JGLOBAL_NO_ROBOTS_TAG</option>
+            </field>
+
+            <field name="author" type="text" label="JAUTHOR"
+                   description="JField_Metadata_Author_Desc"/>
+
+            <field name="rights" type="textarea"
+                   label="JFIELD_META_RIGHTS_LABEL" description="JFIELD_META_RIGHTS_DESC"
+                   required="" filter="string" cols="30" rows="2"/>
+        </fieldset>
+    </fields>
+
+    <fieldset
+            name="custom_tabs"
+    >
+        <field
+                name="tab_content"
+                type="subform"
+                hiddenLabel="true"
+                formsource="/administrator/components/com_solidres/models/forms/customtabs.xml"
+                multiple="true"
+                buttons="add,remove"
+        />
+    </fieldset>
+
+    <!-- Add fields to the request variables for the layout. -->
+    <fieldset name="menu_fields">
+        <field
+                name="add_to_menu"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="SR_ADD_TO_MENU_LABEL"
+                description="SR_ADD_TO_MENU_DESC"
+                class="btn-group"
+                default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+                name="add_to_menutype"
+                type="menu"
+                label="SR_MENU_SELECT"
+                default="mainmenu"
+                showon="add_to_menu:1"/>
+        <field
+                name="menu_title"
+                type="text"
+                label="SR_MENU_TITLE_LABEL"
+                description="SR_MENU_TITLE_DESC"
+                showon="add_to_menu:1"/>
+        <field
+                name="menu_alias"
+                type="text"
+                label="SR_MENU_ALIAS_LABEL"
+                description="SR_MENU_ALIAS_DESC"
+                showon="add_to_menu:1"/>
+        <field
+                name="menu_id"
+                type="hidden"
+                filter="uint"/>
+    </fieldset>
+
+    <fieldset
+            name="staffs"
+            label="SR_STAFFS"
+    >
+        <field
+                name="staffs"
+                type="subform"
+                label="SR_STAFFS"
+                multiple="true"
+                buttons="add,remove"
+        >
+            <form>
+                <field
+                        name="staff_id"
+                        type="user"
+                        label="SR_USER_SELECT"
+                />
+                <field
+                        name="staff_group_id"
+                        type="PartnerUserGroup"
+                        label="SR_GROUPS_SELECT"
+                        multiple="true"
+                        size="10"
+                />
+            </form>
+        </field>
+    </fieldset>
+</form>

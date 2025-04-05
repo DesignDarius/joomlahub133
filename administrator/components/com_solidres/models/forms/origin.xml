@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <config>
+        <inlinehelp button="show"/>
+    </config>
+    <fieldset name="general">
+        <field
+                name="id"
+                type="hidden"
+        />
+        <field
+                name="scope"
+                type="hidden"
+                default="0"
+        />
+        <field
+                name="name"
+                type="text"
+                label="SR_FIELD_ORIGIN_NAME"
+                required="true"
+        />
+        <field
+                name="color"
+                type="color"
+                label="SR_COLOR"
+                required="true"
+        />
+        <field
+                name="state"
+                type="list"
+                label="JSTATUS"
+                default="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="-2">JTRASH</option>
+        </field>
+        <field
+                name="tax_id"
+                type="tax"
+                label="SR_FIELD_TAX_LABEL"
+                filter="uint"
+                class="tax_select"
+        />
+        <field
+                name="is_default"
+                type="radio"
+                layout="joomla.form.field.radio.switcher"
+                label="SR_FIELD_ORIGIN_DEFAULT"
+                default="0"
+                showon="state:1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+</form>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="SR_RESERVATION_ASSET_VIEW_DEFAULT_TITLE" option="sr_reservation_asset_view_default_option">
+		<help
+			key=""
+		/>
+		<message>
+			<![CDATA[SR_RESERVATION_ASSET_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request"
+				  addfieldpath="/administrator/components/com_solidres/models/fields">
+
+			<field name="id" type="Modal_Solidres"
+				   label="SR_FIELD_SELECT_RESERVATIONASSET_LABEL"
+				   required="true"
+				   edit="false"
+				   clear="false"
+				   view="reservationassets"
+				   description="SR_FIELD_SELECT_RESERVATIONASSET_DESC"
+					/>
+		</fieldset>
+	</fields>
+
+	<fields name="params">
+
+	</fields>
+</metadata>

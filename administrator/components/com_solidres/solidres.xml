@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" method="upgrade">
+    <name>com_solidres</name>
+    <author>Solidres Team</author>
+    <authorEmail>contact@solidres.com</authorEmail>
+    <authorUrl>https://www.solidres.com</authorUrl>
+    <copyright>Copyright (C) 2013 Solidres. All Rights Reserved.</copyright>
+    <license>GNU General Public License version 3, or later</license>
+    <version>3.2.2</version>
+    <creationDate>Dec 2024</creationDate>
+    <description>SOLIDRES - Accommodation booking extension for Joomla</description>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8" folder="sql">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+
+    <files folder="frontend/com_solidres">
+        <filename>solidres.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>controllers</folder>
+		<folder>helpers</folder>
+        <folder>language</folder>
+		<folder>layouts</folder>
+        <folder>models</folder>
+        <folder>src</folder>
+        <folder>views</folder>
+    </files>
+
+    <media folder="frontend/media/com_solidres" destination="com_solidres">
+        <folder>assets</folder>
+        <folder>invoices</folder>
+        <folder>pdfAttachment</folder>
+        <file>joomla.asset.json</file>
+    </media>
+
+    <administration>
+        <menu>COM_SOLIDRES</menu>
+		<submenu>
+			<menu alt="SR_MENU_RESERVATION_ASSETS" view="reservationassets" link="option=com_solidres&amp;view=reservationassets">SR_MENU_RESERVATION_ASSETS</menu>
+            <menu alt="SR_MENU_ROOMTYPES" view="roomtypes" link="option=com_solidres&amp;view=roomtypes">SR_MENU_ROOMTYPES</menu>
+            <menu alt="SR_STATISTICS_CALENDARS" view="calendars" link="option=com_solidres&amp;view=calendars">SR_STATISTICS_CALENDARS</menu>
+			<menu alt="SR_MENU_COUPONS" view="coupons" link="option=com_solidres&amp;view=coupons">SR_MENU_COUPONS</menu>
+            <menu alt="SR_MENU_EXTRAS" view="extras" link="option=com_solidres&amp;view=extras">SR_MENU_EXTRAS</menu>
+			<menu alt="SR_MENU_RESERVATIONS" view="reservations" link="option=com_solidres&amp;view=reservations">SR_MENU_RESERVATIONS</menu>
+			<menu alt="SR_MENU_SYSTEM" view="system" link="option=com_solidres&amp;view=system">SR_MENU_SYSTEM</menu>
+            <menu alt="SR_MENU_CONFIG" view="component" link="option=com_config&amp;view=component&amp;component=com_solidres">SR_MENU_CONFIG</menu>
+		</submenu>
+
+        <files folder="backend/com_solidres">
+            <filename>solidres.php</filename>
+            <filename>controller.php</filename>
+            <filename>config.xml</filename>
+            <filename>access.xml</filename>
+            <filename>checksums</filename>
+            <folder>sql</folder>
+            <folder>controllers</folder>
+            <folder>falang</folder>
+            <folder>helpers</folder>
+            <folder>language</folder>
+            <folder>layouts</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+
+    </administration>
+</extension>

@@ -1,0 +1,1 @@
+ALTER TABLE `#__sr_tariffs` ADD `d_interval` TINYINT UNSIGNED NULL DEFAULT 0 AFTER `d_max`;

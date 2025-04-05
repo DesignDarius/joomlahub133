@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+               readonly="true" class="readonly"/>
+
+        <field name="currency_id" label="SR_FIELD_TARIFF_CURRENCY_ID_LABEL"
+               description="SR_FIELD_TARIFF_CURRENCY_ID_DESC"/>
+
+        <field name="customer_group_id" label="SR_FIELD_TARIFF_CUSTOMER_GROUP_ID_LABEL"
+               description="SR_FIELD_TARIFF_CUSTOMER_GROUP_ID_DESC"/>
+
+        <field name="valid_from" type="text" class="datepicker valid-date"
+               default="" label="SR_FIELD_TARIFF_VALID_FROM_LABEL"
+               description="SR_FIELD_TARIFF_VALID_FROM_DESC"/>
+
+        <field name="valid_to" type="text" class="datepicker valid-date"
+               default="" label="SR_FIELD_TARIFF_VALID_TO_LABEL"
+               description="SR_FIELD_TARIFF_VALID_TO_DESC"/>
+
+        <field name="room_type_id" label="SR_FIELD_TARIFF_ROOM_TYPE_ID_LABEL"
+               description="SR_FIELD_TARIFF_ROOM_TYPE_ID_DESC"/>
+
+        <field name="title" type="text" label="SR_FIELD_TARIFF_TITLE_LABEL"
+               description="SR_FIELD_TARIFF_TITLE_DESC"/>
+
+        <field name="description" type="text" label="SR_FIELD_TARIFF_DESCRIPTION_LABEL"
+               description="SR_FIELD_TARIFF_DESCRIPTION_DESC"/>
+
+        <field name="type" type="list"
+               label="SR_FIELD_TARIFF_TYPE_LABEL" description="SR_FIELD_TARIFF_TYPE_DESC"
+               default="1"
+        >
+            <option value="0">SR_FIELD_TARIFF_TYPE_PER_ROOM_PER_NIGHT</option>
+            <option value="1">SR_FIELD_TARIFF_TYPE_PER_PERSON_PER_NIGHT</option>
+        </field>
+
+        <field name="state"
+               type="radio"
+               layout="joomla.form.field.radio.switcher"
+               label="SR_FIELD_TARIFF_STATE_LABEL" description="SR_FIELD_TARIFF_STATE_DESC"
+               default="0"
+        >
+            <option value="0">JUNPUBLISHED</option>
+            <option value="1">JPUBLISHED</option>
+        </field>
+
+        <field name="limit_checkin" type="list"
+               label="SR_FIELD_TARIFF_LIMIT_CHECKIN_LABEL" description="SR_FIELD_TARIFF_LIMIT_CHECKIN_DESC"
+               default="1"
+               multiple="true"
+        >
+            <option value="0">SUN</option>
+            <option value="1">MON</option>
+            <option value="2">TUE</option>
+            <option value="3">WED</option>
+            <option value="4">THU</option>
+            <option value="5">FRI</option>
+            <option value="6">SAT</option>
+        </field>
+
+        <field type="hidden" name="d_min" default="0"/>
+        <field type="hidden" name="d_max" default="0"/>
+        <field type="hidden" name="p_min" default="0"/>
+        <field type="hidden" name="p_max" default="0"/>
+        <field type="hidden" name="mode" default="0"/>
+        <field type="hidden" name="d_interval" default="0"/>
+        <field type="hidden" name="cm_id" default=""/>
+        <field type="hidden" name="q_min" default="0"/>
+        <field type="hidden" name="q_max" default="0"/>
+
+    </fieldset>
+</form>

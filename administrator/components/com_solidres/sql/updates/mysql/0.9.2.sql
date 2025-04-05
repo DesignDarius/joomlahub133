@@ -1,0 +1,1 @@
+ALTER TABLE `#__sr_reservations` ADD COLUMN `origin` VARCHAR(255) NULL DEFAULT NULL ;

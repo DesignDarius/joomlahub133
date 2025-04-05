@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="attachment_path" type="text"
+               default="" label="SR_EMAIL_ATTACHMENTS_FILE_PATH_TITLE"
+               description="SR_EMAIL_ATTACHMENTS_FILE_PATH_DESC" required="true"/>
+
+    </fieldset>
+</form>

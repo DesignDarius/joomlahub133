@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset
+			name="solidres"
+			label="SR_CONTENT_LANGUAGE_OVERRIDE"
+			addfieldpath="/administrator/components/com_solidres/models/fields"
+		>
+			<field
+				name="contentLanguage"
+				type="LanguageOverride"
+				label="SR_CONTENT_LANGUAGE_OVERRIDE"
+				scope="0"
+			/>
+		</fieldset>
+	</fields>
+</form>

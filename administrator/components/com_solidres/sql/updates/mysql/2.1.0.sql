@@ -1,0 +1,1 @@
+ALTER TABLE `#__sr_reservations` ADD `customer_coordinates` TEXT NULL DEFAULT NULL AFTER `customer_ip`;

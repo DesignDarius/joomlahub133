@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension
+        type="module"
+        client="site"
+        method="upgrade">
+    <name>mod_sr_summary</name>
+    <creationDate>Dec 2024</creationDate>
+    <author>Solidres Team</author>
+    <authorEmail>contact@solidres.com</authorEmail>
+    <authorUrl>https://www.solidres.com</authorUrl>
+    <copyright>(C) 2013 - 2020 Solidres. All right reserved</copyright>
+    <license>GNU General Public License version 3, or later</license>
+    <version>3.2.2</version>
+    <description>MOD_SR_SUMMARY_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_sr_summary">mod_sr_summary.php</filename>
+        <filename>mod_sr_summary.xml</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset
+                    name="basic"
+                    addfieldpath="/administrator/components/com_solidres/models/fields">
+                <field
+                        name="sidebar_identification"
+                        type="text"
+                        label="MOD_SR_SUMMARY_SIDEBAR_IDENTIFICATION_LABEL"
+                        description="MOD_SR_SUMMARY_SIDEBAR_IDENTIFICATION_DESC"/>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        validate="CssIdentifier"/>
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>
